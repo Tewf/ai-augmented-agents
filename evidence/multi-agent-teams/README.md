@@ -29,7 +29,7 @@ The first pass of the review behind this repository. It asks when handing a step
 | Whether many agents beat one depends on the task: from +80.8% to -70.0% across 260 configurations | measured | review.md C |
 | A central check cut error amplification from 17.2 times to 4.4 times | measured | review.md C |
 | Failures of multi-agent language-model systems cluster in 14 modes in three groups | measured, descriptive | review.md C |
-| Cascades and routers cut cost, up to 98.3% on one dataset, over 2 times on two benchmarks | measured | review.md D |
+| Cascades and routers cut cost, up to 98.3% on one dataset, over 2 times in certain cases, on three public benchmarks | measured | review.md D |
 | People with AI did worse than the better of the two, on average (secondary) | measured | review.md D |
 | A brief should hold an objective, an output format, tools and boundaries | convention, owner's claim | review.md E |
 | Moral hazard in teams rests on unobserved effort; no source shows a model agent has such an incentive | convention; open | review.md A |

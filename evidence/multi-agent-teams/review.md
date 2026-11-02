@@ -34,7 +34,7 @@ Grades: measured, supported with caveat, convention, not supported. A number rea
 
 - **Task decides the gain**: across 260 configurations, six benchmarks, five architectures and three model families, the change against one agent ranges from +80.8% to -70.0% (Kim 2025, Table and abstract, read). Grade: measured.
 - **Centralised checking contains errors**: errors grow 17.2 times without it and 4.4 times with it (Kim 2025, read). Grade: measured.
-- **The predictive model is weak**: cross-validated R squared 0.373 (Kim 2025, read). It explains about a third.
+- **The predictive model is weak**: cross-validated R squared 0.373 across the six benchmarks, 0.413 with a task-grounded metric (Kim 2025, read). It explains a little over a third.
 - **Failures are mostly about the team**: 14 failure modes in three groups, from 1,600+ traces over 7 frameworks (Cemri 2025, read).
 - The groups are system design, inter-agent misalignment and task verification.
 - Annotators agreed at kappa 0.88 on the taxonomy sample. Grade: measured, descriptive.
@@ -45,9 +45,9 @@ Grades: measured, supported with caveat, convention, not supported. A number rea
 ## D. Delegate or do (Q1)
 
 - **Cascades and routers**: a cascade matched the best single model at 98.3% lower cost on one dataset, 73.3% on another, 59.2% on a third (Chen 2023b, table, read). Grade: measured, on three datasets.
-- **Routers** cut cost by over 2 times without losing quality on two benchmarks (Ong 2024, read in part). Grade: measured.
+- **Routers** cut cost by over 2 times in certain cases, without sacrificing response quality, on three public benchmarks (Ong 2024, read in part). Grade: measured.
 - **Humans with AI**: a meta-analysis of 106 studies and 370 effect sizes (Vaccaro 2024, secondary).
-- The combination did worse than the better of the two, Hedges g = -0.23 (95% CI -0.39 to -0.07).
+- The combination did worse than the better of the two, Hedges g = -0.23 (95% CI -0.39 to -0.07; secondary).
 - Decision tasks lost and content creation gained. Grade: measured.
 - **A framework**: delegation includes transfer of authority, responsibility, roles and trust (Tomasev 2026, secondary). Grade: convention, proposed.
 - No source puts a price on briefing and checking beside the saving.
