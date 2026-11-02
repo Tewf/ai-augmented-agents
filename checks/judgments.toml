@@ -88,3 +88,38 @@ path = "evidence/multi-agent-teams/state-of-the-art.md"
 question = "the name 'state' and the opening are far apart in meaning (0.02): does the name predict the content?"
 file = "a87332f90166"
 answer = "Yes: the `State of the art` is step 3 of the method, and the file shows the best evidence and the practice most adopted per question."
+
+[[answer]]
+check = "figures-present"
+path = "evidence/multi-agent-teams/review.md"
+question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
+file = "d39fa1d546d7"
+answer = "Yes, in part: the cascade cost savings under `D. Delegate or do` are given in words alone, though the state of the art file compares them in a table."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/README.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "16f9831b5ed6"
+answer = "Reference: it is read for its `Claims` table and its `Files` table; it holds no procedure."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/review.md"
+question = "reads about equally as how-to and explanation: one mode per document?"
+file = "d39fa1d546d7"
+answer = "Explanation: it states what each tradition measured, under `Existing reviews` and the lettered strands; the how-to match is only its grouping by question."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/review.md"
+question = "the name 'review' and the opening are far apart in meaning (0.08): does the name predict the content?"
+file = "d39fa1d546d7"
+answer = "Yes: the `Review: what each tradition has measured` heading names the content, and the file groups findings by strand."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/state-of-the-art.md"
+question = "the name 'state' and the opening are far apart in meaning (0.02): does the name predict the content?"
+file = "03c2543b5893"
+answer = "Yes: the `State of the art: the best evidence and the practice most adopted` heading names the two columns the file compares."
