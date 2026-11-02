@@ -1,0 +1,5 @@
+---
+title: "Multi-agent teams: delegation, briefs, incentives and coordination of people and models"
+---
+
+{{< include README.md >}}
