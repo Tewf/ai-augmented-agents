@@ -8,6 +8,7 @@ decision in one sentence under its title, then its status, context, decision and
 | Record | Summary |
 |---|---|
 | [0001 A repository of its own](0001-a-repository-of-its-own.md) | Several agents, people and models, on one project is one problem, so it is one repository, set up before any work on it |
+| [0002 The baseline is the maintainer's arrangement](0002-the-baseline-is-the-maintainers-arrangement.md) | The review compares everything against B1, one coordinating session and six owners, described as practice |
 
 ## See also
 
