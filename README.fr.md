@@ -1,0 +1,115 @@
+# Agents augmentés par l'IA
+
+[![Vérifications contre reader-ergonomics](https://github.com/Tewf/ai-augmented-agents/actions/workflows/checks.yml/badge.svg)](https://github.com/Tewf/ai-augmented-agents/actions/workflows/checks.yml)
+[![Site](https://github.com/Tewf/ai-augmented-agents/actions/workflows/pages.yml/badge.svg)](https://tewf.github.io/ai-augmented-agents/)
+
+Plusieurs **agents**, personnes et modèles de langue, sur un même projet : qui délègue quoi à qui, par quel brief, ce
+que chacun décide, et ce qui les fait tirer dans le même sens. Le cas d'un seul modèle est
+[ai-augmented-project](https://github.com/Tewf/ai-augmented-project). Ce dépôt demande ce qui change quand ils sont
+nombreux, avec les outils de la théorie des jeux, de la théorie des équipes et de l'apprentissage par renforcement
+multi-agents.
+
+Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
+
+> **État (2026-11-02) :** mis en place ; rien n'est encore écrit au-delà du périmètre. Le premier travail est une revue
+> de littérature, non commencée. Le nom est provisoire jusqu'à ce que la première étape de cette revue dise comment le
+> domaine nomme la chose. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
+>
+> **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
+> reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
+
+## Où il se place
+
+![ai-augmented-agents utilise ai-augmented-project comme unité, qui utilise reader-ergonomics-project et reader-ergonomics-blueprint, qui obéissent à la norme et au topic.](where-it-sits.svg)
+
+<details>
+<summary>Graphviz source</summary>
+
+```dot
+// Where ai-augmented-agents sits. Colours: AI-augmented family green, reader-ergonomics family blue, the bridge
+// orange, each named in its box; this repository has the thick border.
+digraph where_it_sits {
+  graph [rankdir=TB, nodesep=0.45, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  AG  [label=<<b>ai-augmented-agents</b><br/><font point-size="11" color="#55575F">AI-augmented family: several agents on one project</font>>, fillcolor="#E6F2EA", color="#2E7D4F", penwidth=2.6];
+  AP  [label=<<b>ai-augmented-project</b><br/><font point-size="11" color="#55575F">AI-augmented family: one person, one model, one machine</font>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  P   [label=<<b>reader-ergonomics-project</b><br/><font point-size="11" color="#55575F">reader-ergonomics family: the steps</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  BP  [label=<<b>reader-ergonomics-blueprint</b><br/><font point-size="11" color="#55575F">the bridge: reasoning checked</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  RE  [label=<<b>reader-ergonomics, reader-ergonomics-topic</b><br/><font point-size="11" color="#55575F">the standard and the unit of writing</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  AG -> AP [label=" uses, as the unit"];
+  AP -> P [label=" uses"];
+  AP -> BP [label=" uses"];
+  P -> RE [label=" obeys"];
+  BP -> RE [label=" obeys"];
+}
+```
+
+</details>
+
+- **Il utilise [ai-augmented-project](https://github.com/Tewf/ai-augmented-project)** comme unité : un agent sur une
+  étape est le cas de ce dépôt-là ; celui-ci arrange les unités.
+- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) et exécute ses vérifications en CI.
+- **Il ne pointe que vers le bas.** La carte de la famille est [ai-augmented](https://github.com/Tewf/ai-augmented).
+
+## Périmètre
+
+| | Quoi | Pourquoi |
+|---|---|---|
+| dedans | la délégation : quand remettre une étape à un autre agent vaut mieux que la faire, et ce que le brief doit tenir pour qu'un agent moins cher ait raison | la règle du mainteneur est de dépenser le jugement, pas le volume ; la règle a besoin d'une mesure |
+| dedans | la coordination : comment plusieurs agents sur une famille de dépôts gardent un lieu par fait et une décision par question | six sessions ont bâti six dépôts en un jour ; ce qu'elles ont fait est la première donnée |
+| dedans | les incitations : ce qu'une personne et un modèle optimisent chacun, et le jeu dans lequel ils sont, du problème principal-agent à la théorie des équipes et à la conception de mécanismes | l'économie a les modèles ; qu'un agent-modèle ait une incitation du tout reste ouvert |
+| dedans | l'apprentissage : quand plusieurs agents s'améliorent à se coordonner, et ce qu'en dit l'apprentissage par renforcement multi-agents | le jeu répété, avec et sans modèle dedans |
+| dehors | le cas d'un seul agent | [ai-augmented-project](https://github.com/Tewf/ai-augmented-project) |
+| dehors | construire ou entraîner les modèles des agents | d'autres le font ; ce dépôt les arrange |
+| dehors | le logiciel | [ai-augmented-ide](https://github.com/Tewf/ai-augmented-ide), plus tard |
+
+## Le premier travail : une revue de littérature
+
+Non commencée. Elle suit l'ordre d'une revue de thèse, et elle est finie quand elle peut nommer la référence.
+
+1. **Cadrer :** le problème en une phrase, et comment chaque domaine le nomme. Pistes à vérifier : systèmes
+   multi-agents, problème principal-agent, théorie des équipes, conception de mécanismes, apprentissage par renforcement
+   multi-agents, systèmes d'agents à modèle de langue. Le dépôt peut être renommé alors.
+2. **Revue :** chaque nom, cherché par son nom académique, son acronyme et son auteur ; les synthèses d'abord.
+   - l'économie de la délégation et des équipes : aléa moral dans les équipes, théorie des équipes, coût de la communication ;
+   - les systèmes de plusieurs agents à modèle de langue, ce qu'on les mesure gagner sur un seul, et ce qu'ils perdent ;
+   - la coopération dans les jeux répétés, avec des personnes et avec des agents apprenants ;
+   - ce qu'un brief doit tenir : la littérature grise de la remise d'un travail à un exécutant moins cher.
+3. **État de l'art, et le dossier contre.**
+4. **Positionnement :** ce que ce dépôt demande et que le domaine ne répond pas déjà.
+5. **Référence :** l'arrangement du mainteneur du 2026-10-29, une session coordinatrice et six propriétaires, écrit et
+   comparé au meilleur arrangement trouvé par la revue.
+
+## Questions auxquelles la revue doit répondre
+
+- **Déléguer ou faire.** Quand remettre une étape à un agent moins cher, avec le temps de le briefer et de le vérifier,
+  coûte-t-il moins que la faire ?
+- **Le brief.** Que doit tenir un brief pour qu'un agent qui ne sait rien d'autre ait raison, et comment est-il vérifié ?
+- **Incitations.** Une personne optimise quelque chose ; qu'optimise un agent-modèle, s'il optimise quoi que ce soit,
+  et qu'en suit-il pour le jeu où ils sont ?
+- **Coordination mesurée.** Que peut-on mesurer dans l'historique de plusieurs dépôts bâtis par plusieurs agents à la
+  fois : décisions prises deux fois, faits écrits en deux lieux, questions parvenues à la personne ?
+
+## Vérifier
+
+```sh
+git clone https://github.com/Tewf/reader-ergonomics
+python3 reader-ergonomics/checks/run.py chemin/vers/ce/depot
+```
+
+La CI exécute les mêmes vérifications à chaque push, et une exécution échoue à la première erreur
+([checks.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/checks.yml)). Chaque push sur
+master construit aussi le site, [tewf.github.io/ai-augmented-agents](https://tewf.github.io/ai-augmented-agents/)
+([pages.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/pages.yml)).
+
+## Contenu
+
+| Partie | Résumé |
+|---|---|
+| [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
+
+## Licence
+
+Code sous [Apache License 2.0](LICENSE) ; prose sous [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Réutilisez-le comme vous le
+souhaitez, en créditant ce dépôt ; [CITATION.cff](CITATION.cff) donne une citation si besoin.

@@ -1,0 +1,114 @@
+# AI-augmented agents
+
+[![Checks against reader-ergonomics](https://github.com/Tewf/ai-augmented-agents/actions/workflows/checks.yml/badge.svg)](https://github.com/Tewf/ai-augmented-agents/actions/workflows/checks.yml)
+[![Site](https://github.com/Tewf/ai-augmented-agents/actions/workflows/pages.yml/badge.svg)](https://tewf.github.io/ai-augmented-agents/)
+
+Several **agents**, people and language models, working one project: who delegates what to whom, by what brief, what
+each one decides, and what makes them pull the same way. The one-model case is
+[ai-augmented-project](https://github.com/Tewf/ai-augmented-project); this repository asks what changes when there are
+many, with the tools of game theory, team theory and multi-agent reinforcement learning.
+
+This page in French: [README.fr.md](README.fr.md).
+
+> **Status (2026-11-02):** set up; nothing is written yet beyond the scope. The first job is a literature review, not
+> started. The name is provisional until that review's first step says what the field calls this. It is not an
+> official standard, not a peer-reviewed study and not a new result.
+>
+> **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
+> reader-ergonomics was made. Corrections are welcome as issues.
+
+## Where it sits
+
+![ai-augmented-agents uses ai-augmented-project as its unit, which uses reader-ergonomics-project and reader-ergonomics-blueprint, which obey the standard and the topic.](where-it-sits.svg)
+
+<details>
+<summary>Graphviz source</summary>
+
+```dot
+// Where ai-augmented-agents sits. Colours: AI-augmented family green, reader-ergonomics family blue, the bridge
+// orange, each named in its box; this repository has the thick border.
+digraph where_it_sits {
+  graph [rankdir=TB, nodesep=0.45, ranksep=0.5, bgcolor="white", pad=0.2, fontname="Inter"];
+  node  [shape=box, style="rounded,filled", fontname="Inter", fontsize=13, margin="0.2,0.1", penwidth=1.5, fontcolor="#1F2328"];
+  edge  [fontname="Inter", fontsize=11, color="#3D434B", fontcolor="#55575F", penwidth=1.3, arrowsize=0.8];
+  AG  [label=<<b>ai-augmented-agents</b><br/><font point-size="11" color="#55575F">AI-augmented family: several agents on one project</font>>, fillcolor="#E6F2EA", color="#2E7D4F", penwidth=2.6];
+  AP  [label=<<b>ai-augmented-project</b><br/><font point-size="11" color="#55575F">AI-augmented family: one person, one model, one machine</font>>, fillcolor="#E6F2EA", color="#2E7D4F"];
+  P   [label=<<b>reader-ergonomics-project</b><br/><font point-size="11" color="#55575F">reader-ergonomics family: the steps</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  BP  [label=<<b>reader-ergonomics-blueprint</b><br/><font point-size="11" color="#55575F">the bridge: reasoning checked</font>>, fillcolor="#FBEDE4", color="#B4541A"];
+  RE  [label=<<b>reader-ergonomics, reader-ergonomics-topic</b><br/><font point-size="11" color="#55575F">the standard and the unit of writing</font>>, fillcolor="#E8EEF8", color="#2F5DA8"];
+  AG -> AP [label=" uses, as the unit"];
+  AP -> P [label=" uses"];
+  AP -> BP [label=" uses"];
+  P -> RE [label=" obeys"];
+  BP -> RE [label=" obeys"];
+}
+```
+
+</details>
+
+- **It uses [ai-augmented-project](https://github.com/Tewf/ai-augmented-project)** as the unit: one agent on one step is
+  that repository's case; this one arranges the units.
+- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) and runs its checks in CI.
+- **It links down only.** The family's map is [ai-augmented](https://github.com/Tewf/ai-augmented).
+
+## Scope
+
+| | What | Why |
+|---|---|---|
+| in | delegation: when handing a step to another agent beats doing it, and what the brief must hold for a cheaper agent to be right | the maintainer's rule is to spend judgment, not volume; the rule needs a measure |
+| in | coordination: how several agents on one family of repositories keep one place per fact and one decision per question | six sessions built six repositories in one day; what they did is the first data |
+| in | incentives: what a person and a model each optimise, and the game they are in, from the principal-agent problem to team theory and mechanism design | economics has the models; whether a model agent has an incentive at all is open |
+| in | learning: when several agents improve at coordinating, and what multi-agent reinforcement learning says about it | the repeated game, with and without a model in it |
+| out | the one-agent case | [ai-augmented-project](https://github.com/Tewf/ai-augmented-project) |
+| out | building or training the agents' models | others do it; this arranges them |
+| out | the software | [ai-augmented-ide](https://github.com/Tewf/ai-augmented-ide), later |
+
+## The first job: a literature review
+
+Not started. It follows the order of a thesis review, and it is finished when it can name the baseline.
+
+1. **Frame:** the problem in one sentence, and what each field calls it. Leads to verify: multi-agent systems, the
+   principal-agent problem, team theory, mechanism design, multi-agent reinforcement learning, systems of language-model
+   agents. The repository may be renamed then.
+2. **Review:** each name, searched by its academic name, its acronym and its author; surveys first.
+   - the economics of delegation and of teams: moral hazard in teams, team theory, the cost of communication;
+   - systems of several language-model agents, what they are measured to gain over one, and what they lose;
+   - cooperation in repeated games, with people and with learning agents;
+   - what a brief must hold: the grey literature of handing work to a cheaper worker.
+3. **State of the art, and the case against.**
+4. **Position:** what this repository asks that the field does not already answer.
+5. **Baseline:** the maintainer's own arrangement of 2026-10-29, one coordinating session and six owners, written
+   down and compared with the best arrangement the review found.
+
+## Questions the review must answer
+
+- **Delegate or do.** When does handing a step to a cheaper agent, with the time to brief and to check it, cost less
+  than doing it?
+- **The brief.** What must a brief hold for an agent that knows nothing else to be right, and how is it checked?
+- **Incentives.** A person optimises something; what does a model agent optimise, if anything, and what follows for
+  the game they are in?
+- **Measured coordination.** What can be measured from the history of several repositories built by several agents
+  at once: decisions taken twice, facts written in two places, questions that reached the person?
+
+## Check it
+
+```sh
+git clone https://github.com/Tewf/reader-ergonomics
+python3 reader-ergonomics/checks/run.py path/to/this/repository
+```
+
+CI runs the same checks on every push, and a run fails on any error
+([checks.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/checks.yml)). Every push to
+master also renders the site, [tewf.github.io/ai-augmented-agents](https://tewf.github.io/ai-augmented-agents/)
+([pages.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/pages.yml)).
+
+## Contents
+
+| Part | Summary |
+|---|---|
+| [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
+
+## Licence
+
+Code under the [Apache License 2.0](LICENSE); prose under [CC BY 4.0](LICENSES/CC-BY-4.0.txt). Reuse it as you wish,
+with credit to this repository; [CITATION.cff](CITATION.cff) gives a citation if you need one.
