@@ -11,9 +11,10 @@ multi-agents.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** mis en place ; rien n'est encore écrit au-delà du périmètre. Le premier travail est une revue
-> de littérature, non commencée. Le nom est provisoire jusqu'à ce que la première étape de cette revue dise comment le
-> domaine nomme la chose. Ce n'est ni une norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
+> **État (2026-11-02) :** la première passe de la revue de littérature est écrite : 35 sources, un relecteur, la
+> référence nommée. Rien n'a été exécuté ni construit. L'étape de cadrage a trouvé que le mot du domaine pour ce
+> problème est **équipe**, non agent ; le nom reste. Ce n'est ni une norme officielle, ni une étude relue par des
+> pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
@@ -66,11 +67,11 @@ digraph where_it_sits {
 
 ## Le premier travail : une revue de littérature
 
-Non commencée. Elle suit l'ordre d'une revue de thèse, et elle est finie quand elle peut nommer la référence.
+Une première passe est écrite dans [evidence](evidence/multi-agent-teams/README.md) (en anglais). Elle suit l'ordre d'une revue de thèse, et elle est finie quand elle peut nommer la référence, ce qu'elle fait.
 
 1. **Cadrer :** le problème en une phrase, et comment chaque domaine le nomme. Pistes à vérifier : systèmes
    multi-agents, problème principal-agent, théorie des équipes, conception de mécanismes, apprentissage par renforcement
-   multi-agents, systèmes d'agents à modèle de langue. Le dépôt peut être renommé alors.
+   multi-agents, systèmes d'agents à modèle de langue. Le nom a été gardé ([frame](evidence/multi-agent-teams/frame.md)).
 2. **Revue :** chaque nom, cherché par son nom académique, son acronyme et son auteur ; les synthèses d'abord.
    - l'économie de la délégation et des équipes : aléa moral dans les équipes, théorie des équipes, coût de la communication ;
    - les systèmes de plusieurs agents à modèle de langue, ce qu'on les mesure gagner sur un seul, et ce qu'ils perdent ;
@@ -91,6 +92,20 @@ Non commencée. Elle suit l'ordre d'une revue de thèse, et elle est finie quand
 - **Coordination mesurée.** Que peut-on mesurer dans l'historique de plusieurs dépôts bâtis par plusieurs agents à la
   fois : décisions prises deux fois, faits écrits en deux lieux, questions parvenues à la personne ?
 
+## Ce que la revue a trouvé
+
+La première passe : 35 sources, dont 3 grises. Le détail et les niveaux de preuve sont dans [la revue](evidence/multi-agent-teams/review.md), en anglais.
+
+- **Aucun domaine ne nomme le problème entier.** L'économie étudie les équipes de personnes (théorie des équipes, aléa moral dans les équipes), l'informatique étudie les programmes, et la pratique a ses propres mots ([frame](evidence/multi-agent-teams/frame.md)).
+- **Plusieurs agents ne battent pas un seul de façon fiable.** Sur 260 configurations, la variation va de +80,8 % à -70,0 %, selon la tâche (mesuré). Un contrôle central a ramené l'amplification des erreurs de 17,2 fois à 4,4 fois.
+- **Déléguer à un modèle moins cher paie, et se mesure comme un routage.** Une cascade a réduit le coût jusqu'à 98,3 % sur un jeu de données. Aucune source ne chiffre le temps de briefer et de vérifier.
+- **Le brief a une convention et aucun test.** Objectif, format de sortie, outils et limites sont conseillés par une entreprise à propos de son propre système ; aucune étude n'enlève un champ.
+- **Les incitations et les comptes restent ouverts.** Aucune source ne montre qu'un agent-modèle a une incitation, et aucune ne compte les décisions prises deux fois ou les faits écrits deux fois.
+
+## La référence
+
+**B1** : l'arrangement du mainteneur du 2026-10-29, une session coordinatrice et six propriétaires, écrit pour cette revue. Il est comparé à un chef central qui emploie des briefs explicites et un contrôle central ([référence](evidence/multi-agent-teams/baseline.md)).
+
 ## Vérifier
 
 ```sh
@@ -107,6 +122,7 @@ master construit aussi le site, [tewf.github.io/ai-augmented-agents](https://tew
 
 | Partie | Résumé |
 |---|---|
+| [evidence](evidence/) | la revue derrière ce dépôt : cadrage, protocole, sources, résultats, position et référence (en anglais) |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |
 
 ## Licence

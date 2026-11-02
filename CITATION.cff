@@ -6,7 +6,7 @@ message: >-
   and not a new result.
 title: "ai-augmented-agents (work in progress)"
 abstract: >-
-  Several agents, people and language models, on one project: delegation, coordination and incentives, with the tools of game theory, team theory and multi-agent reinforcement learning. Scope only; the review is not started.
+  Several agents, people and language models, on one project: delegation, coordination and incentives, with the tools of game theory, team theory and multi-agent reinforcement learning. A first review pass of 35 sources is written.
 type: software
 authors:
   - name: "Tewf"

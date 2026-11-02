@@ -13,8 +13,78 @@ file = ""
 answer = "It stays: `decisions` is the folder the decision-record shape names for its records; it holds the README and record 0001 today, and grows one file per choice."
 
 [[answer]]
+check = "figures-present"
+path = "evidence/multi-agent-teams/review.md"
+question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
+file = "4ff668b2d3f8"
+answer = "No: each strand under `Existing reviews` and the lettered headings is a list of one finding per line, and the comparisons across them are drawn as tables in the state of the art and baseline files."
+
+[[answer]]
 check = "document-mode"
 path = "README.fr.md"
 question = "reads about equally as how-to and tutorial: one mode per document?"
-file = "4a09a0332800"
-answer = "Reference: la page d'accueil, lue pour `Où il se place`, le `Périmètre` et `Le premier travail`, puis les `Questions auxquelles la revue doit répondre`. Sa seule tâche, `Vérifier`, tient en deux commandes pour qui veut lancer les vérifications."
+file = "0f9b08477206"
+answer = "Reference: la page d'accueil, lue pour `Où il se place`, `Ce que la revue a trouvé` et `La référence`; la seule tâche, `Vérifier`, tient en deux commandes."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/README.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "0a472b1326c4"
+answer = "Reference: it is read for its `Claims` table and its `Files` table; it holds no procedure."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/review.md"
+question = "reads about equally as how-to and explanation: one mode per document?"
+file = "4ff668b2d3f8"
+answer = "Explanation: it states what each tradition measured, under `Existing reviews` and the lettered strands; the how-to match is only its grouping by question."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/sources.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "f543cd4a74d2"
+answer = "Reference: a data table of the pool, read under `Flow` and `The pool`; it asks the reader to do nothing."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/state-of-the-art.md"
+question = "reads about equally as explanation and how-to: one mode per document?"
+file = "a87332f90166"
+answer = "Reference: one table per question, comparing holders of the `Best evidence` and the practice most adopted; it explains by comparison only."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/baseline.md"
+question = "the name 'baseline' and the opening are far apart in meaning (0.17): does the name predict the content?"
+file = "f364c83b4f8f"
+answer = "Yes: the `Baseline` is the arrangement compared against, and the opening says so in its first sentence."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/frame.md"
+question = "the name 'frame' and the opening are far apart in meaning (0.16): does the name predict the content?"
+file = "ba16c120c04b"
+answer = "Yes: a `Frame` is step 1 of the method, and the file states the problem and the names the field gives it."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/position.md"
+question = "the name 'position' and the opening are far apart in meaning (0.05): does the name predict the content?"
+file = "4e3ee0598a38"
+answer = "Yes: `Position` is step 4 of the method, and the file lists what is known, what is not and what can be added."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/review.md"
+question = "the name 'review' and the opening are far apart in meaning (0.08): does the name predict the content?"
+file = "4ff668b2d3f8"
+answer = "Yes: the `Review` is step 2 of the method, and the file groups findings by strand."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/state-of-the-art.md"
+question = "the name 'state' and the opening are far apart in meaning (0.02): does the name predict the content?"
+file = "a87332f90166"
+answer = "Yes: the `State of the art` is step 3 of the method, and the file shows the best evidence and the practice most adopted per question."

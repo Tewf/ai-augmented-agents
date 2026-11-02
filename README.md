@@ -10,9 +10,9 @@ many, with the tools of game theory, team theory and multi-agent reinforcement l
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** set up; nothing is written yet beyond the scope. The first job is a literature review, not
-> started. The name is provisional until that review's first step says what the field calls this. It is not an
-> official standard, not a peer-reviewed study and not a new result.
+> **Status (2026-11-02):** the first pass of the literature review is written: 35 sources, one reviewer, the baseline
+> named. Nothing has been run or built. The frame step found that the field's word for the problem is **team**, not
+> agent; the name stays. It is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
@@ -65,11 +65,11 @@ digraph where_it_sits {
 
 ## The first job: a literature review
 
-Not started. It follows the order of a thesis review, and it is finished when it can name the baseline.
+A first pass is written in [evidence](evidence/multi-agent-teams/README.md). It follows the order of a thesis review, and it is finished when it can name the baseline, which it does.
 
 1. **Frame:** the problem in one sentence, and what each field calls it. Leads to verify: multi-agent systems, the
    principal-agent problem, team theory, mechanism design, multi-agent reinforcement learning, systems of language-model
-   agents. The repository may be renamed then.
+   agents. The name was kept ([frame](evidence/multi-agent-teams/frame.md)).
 2. **Review:** each name, searched by its academic name, its acronym and its author; surveys first.
    - the economics of delegation and of teams: moral hazard in teams, team theory, the cost of communication;
    - systems of several language-model agents, what they are measured to gain over one, and what they lose;
@@ -90,6 +90,20 @@ Not started. It follows the order of a thesis review, and it is finished when it
 - **Measured coordination.** What can be measured from the history of several repositories built by several agents
   at once: decisions taken twice, facts written in two places, questions that reached the person?
 
+## What the review found
+
+The first pass: 35 sources, 3 of them grey. Details and grades are in [the review](evidence/multi-agent-teams/review.md).
+
+- **No field names the whole problem.** Economics studies teams of people (team theory, moral hazard in teams), computer science studies programs, and practice has its own words ([frame](evidence/multi-agent-teams/frame.md)).
+- **Many agents do not reliably beat one.** Over 260 configurations the change ran from +80.8% to -70.0%, set by the task (measured). A central check cut error amplification from 17.2 times to 4.4 times.
+- **Delegating to a cheaper model pays, and is measured as routing.** A cascade cut cost by up to 98.3% on one dataset. No source prices briefing and checking.
+- **The brief has a convention and no test.** Objective, output format, tools and boundaries are advised by one company about its own system; no study removes one field.
+- **Incentives and counts are open.** No source shows a model agent has an incentive, and none counts decisions taken twice or facts written twice.
+
+## The baseline
+
+**B1**: the maintainer's arrangement of 2026-10-29, one coordinating session and six owners, written down for this review. It is compared with a central lead that uses explicit briefs and a central check ([baseline](evidence/multi-agent-teams/baseline.md)).
+
 ## Check it
 
 ```sh
@@ -106,6 +120,7 @@ master also renders the site, [tewf.github.io/ai-augmented-agents](https://tewf.
 
 | Part | Summary |
 |---|---|
+| [evidence](evidence/) | the review behind this repository: frame, protocol, sources, findings, position and baseline |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence

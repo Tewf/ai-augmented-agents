@@ -1,6 +1,6 @@
 # AI-augmented agents
 
-> Several agents, people and language models, on one project: delegation, coordination and incentives, with the tools of game theory, team theory and multi-agent reinforcement learning. Scope only; the review is not started.
+> Several agents, people and language models, on one project: delegation, coordination and incentives, with the tools of game theory, team theory and multi-agent reinforcement learning. A first review pass is written; the baseline is named.
 
 Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
 
@@ -8,6 +8,9 @@ Each page's markdown source is served at the same path with a .md extension. Thi
 
 - [AI-augmented agents](https://tewf.github.io/ai-augmented-agents/README.md): the scope, the first job and the questions its review must answer
 - [Decisions](https://tewf.github.io/ai-augmented-agents/decisions/README.md): one record per choice that shapes the repository
+
+- [Evidence](https://tewf.github.io/ai-augmented-agents/evidence/README.md): the review behind the repository
+- [Multi-agent teams](https://tewf.github.io/ai-augmented-agents/evidence/multi-agent-teams/README.md): the first pass, 35 sources, with the baseline B1
 
 ## Contributing
 
