@@ -10,9 +10,9 @@ many, with the tools of game theory, team theory and multi-agent reinforcement l
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-02):** the first pass of the literature review is written: 35 sources, one reviewer, the baseline
-> named. One small run on the brief has been made (30 calls); nothing else has been run or built. The frame step found that the field's word for the problem is **team**, not
-> agent; the name stays. It is not an official standard, not a peer-reviewed study and not a new result.
+> **Status (2026-11-03):** the first pass of the literature review is written: 35 sources, one reviewer, the baseline
+> named. One small run on the brief has been made (30 calls). Five principles and one shape, the exchange, are written, each with a program check. The frame step found
+> that the field's word for the problem is **team**, not agent; the name stays. It is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
@@ -113,6 +113,20 @@ One task with a checkable answer, given to a small hosted model in three arms, t
 - The convention alone did not help on this task; listing the checks did.
 - It cannot say more: one task, one model, ten runs, and the last arm is shown the cases it is judged by.
 
+## The standard
+
+The [card](standard.md) holds five principles in two groups, each with its grade and a check that runs in CI. Read [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md) first.
+
+| Principle | Grade | Check |
+|---|---|---|
+| [List the checks](principles/brief/list-the-checks.md) | convention for the parts; supported with caveat for the checks | `task-headings` |
+| [Say why it is handed over](principles/brief/say-why-handed-over.md) | measured; convention for the line | `task-decided` |
+| [Escalate on a failed check](principles/brief/escalate-on-a-failed-check.md) | measured; convention for the line | `task-decided` |
+| [Run the checks at the lead](principles/result/run-the-checks-at-the-lead.md) | measured; convention for the rule | `task-checks` |
+| [Keep the result untouched](principles/result/keep-the-result-untouched.md) | convention | `exchange-pairs` |
+
+The one shape is the [exchange](shapes/exchange.md): a task file, a result file kept as it came, and the verdict elsewhere. Its worked example is the brief test's own task ([decision 0004](decisions/0004-which-findings-became-principles.md)).
+
 ## The baseline
 
 **B1**: the maintainer's arrangement of 2026-10-29, one coordinating session and six owners, written down for this review. It is compared with a central lead that uses explicit briefs and a central check ([baseline](evidence/multi-agent-teams/baseline.md)).
@@ -133,6 +147,9 @@ master also renders the site, [tewf.github.io/ai-augmented-agents](https://tewf.
 
 | Part | Summary |
 |---|---|
+| [standard](standard.md) | the card: five principles on handing work from one agent to another, with their grades |
+| [principles](principles/) | one file per principle: claim, grade, evidence, check, and where it stops |
+| [shapes](shapes/) | the exchange: the task file, the result file and the verdict, with a worked example |
 | [evidence](evidence/) | the review behind this repository: frame, protocol, sources, findings, position and baseline |
 | [experiments](experiments/) | runs of the questions above, with protocol, code and results |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |

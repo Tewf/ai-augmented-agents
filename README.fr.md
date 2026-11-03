@@ -11,8 +11,8 @@ multi-agents.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-02) :** la première passe de la revue de littérature est écrite : 35 sources, un relecteur, la
-> référence nommée. Une petite exécution sur le brief a été faite (30 appels) ; rien d'autre n'a été exécuté ni construit. L'étape de cadrage a trouvé que le mot du domaine pour ce
+> **État (2026-11-03) :** la première passe de la revue de littérature est écrite : 35 sources, un relecteur, la
+> référence nommée. Une petite exécution sur le brief a été faite (30 appels) ; cinq principes et une forme, l'échange, sont écrits, chacun avec une vérification par programme. L'étape de cadrage a trouvé que le mot du domaine pour ce
 > problème est **équipe**, non agent ; le nom reste. Ce n'est ni une norme officielle, ni une étude relue par des
 > pairs, ni un résultat nouveau.
 >
@@ -115,6 +115,20 @@ Une tâche à réponse vérifiable, donnée à un petit modèle hébergé en tro
 - La convention seule n'a pas aidé sur cette tâche ; lister les vérifications, si.
 - Elle ne dit pas plus : une tâche, un modèle, dix essais, et le dernier bras voit les cas qui le jugent.
 
+## La norme
+
+La [fiche](standard.md) réunit cinq principes en deux groupes, chacun avec son niveau de preuve et une vérification qui tourne en CI. Lisez d'abord [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md).
+
+| Principe | Niveau | Vérification |
+|---|---|---|
+| [List the checks](principles/brief/list-the-checks.md) | convention pour les parties ; soutenu avec réserve pour les vérifications | `task-headings` |
+| [Say why it is handed over](principles/brief/say-why-handed-over.md) | mesuré ; convention pour la ligne | `task-decided` |
+| [Escalate on a failed check](principles/brief/escalate-on-a-failed-check.md) | mesuré ; convention pour la ligne | `task-decided` |
+| [Run the checks at the lead](principles/result/run-the-checks-at-the-lead.md) | mesuré ; convention pour la règle | `task-checks` |
+| [Keep the result untouched](principles/result/keep-the-result-untouched.md) | convention | `exchange-pairs` |
+
+L'unique forme est l'[échange](shapes/exchange.md) : un fichier de tâche, un fichier de résultat gardé tel qu'il est revenu, et le verdict ailleurs. Son exemple travaillé est la tâche du test du brief ([décision 0004](decisions/0004-which-findings-became-principles.md)).
+
 ## La référence
 
 **B1** : l'arrangement du mainteneur du 2026-10-29, une session coordinatrice et six propriétaires, écrit pour cette revue. Il est comparé à un chef central qui emploie des briefs explicites et un contrôle central ([référence](evidence/multi-agent-teams/baseline.md)).
@@ -135,6 +149,9 @@ master construit aussi le site, [tewf.github.io/ai-augmented-agents](https://tew
 
 | Partie | Résumé |
 |---|---|
+| [standard](standard.md) | la fiche : cinq principes pour confier un travail d'un agent à un autre, avec leurs niveaux (en anglais) |
+| [principles](principles/) | un fichier par principe : énoncé, niveau, preuve, vérification et limites (en anglais) |
+| [shapes](shapes/) | l'échange : le fichier de tâche, le fichier de résultat et le verdict, avec un exemple travaillé (en anglais) |
 | [evidence](evidence/) | la revue derrière ce dépôt : cadrage, protocole, sources, résultats, position et référence (en anglais) |
 | [experiments](experiments/) | des exécutions des questions ci-dessus, avec protocole, code et résultats (en anglais) |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |

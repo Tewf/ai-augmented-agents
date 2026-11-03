@@ -137,3 +137,45 @@ path = "experiments/brief-test/protocol.md"
 question = "the name 'protocol' and the opening are far apart in meaning (0.16): does the name predict the content?"
 file = "486cb69c4a34"
 answer = "Yes: `Protocol` names what the file holds, the task, arms, judge and limits of the run, as a protocol does; the title only adds the question it serves."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "91 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "0fe5e9e0928b"
+answer = "The file has one role, the French front page: it mirrors `README.md` heading by heading, so it stays whole; its `Périmètre` table and `La norme` table are lists of rows, not logic."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "90 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "c59bc3af5215"
+answer = "The front page has one role, to say what the repository is and what it found, in one sentence; its `Scope` and `The standard` tables are rows, so it stays whole."
+
+[[answer]]
+check = "document-mode"
+path = "README.fr.md"
+question = "reads about equally as how-to and tutorial: one mode per document?"
+file = "0fe5e9e0928b"
+answer = "Reference: la page d'accueil, lue pour `Où il se place`, `La norme` et `La référence`; la seule tâche, `Vérifier`, tient en deux commandes."
+
+[[answer]]
+check = "document-mode"
+path = "decisions/0004-which-findings-became-principles.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "1cc1e854390d"
+answer = "Reference: it is read for its `Decision` list of five principles and the findings that stayed; it holds no procedure."
+
+[[answer]]
+check = "name-content"
+path = "principles/brief/say-why-handed-over.md"
+question = "the name 'handed over' and the opening are far apart in meaning (0.16): does the name predict the content?"
+file = "ec7d85bb73eb"
+answer = "Yes: the claim is about work that leaves the lead, and `Why handed over` is the line it asks the task file to hold."
+
+[[answer]]
+check = "name-content"
+path = "shapes/exchange.md"
+question = "the name 'exchange' and the opening are far apart in meaning (0.19): does the name predict the content?"
+file = "62cfd23ae8dd"
+answer = "Yes: an `exchange` is the task file out and the result file back, and the opening says that the pair is the unit."
