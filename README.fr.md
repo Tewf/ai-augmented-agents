@@ -30,8 +30,8 @@ Dix minutes, sans lire la revue. La forme générale est la section « Take your
 1. **Épingler la norme par son commit**, pour que ses vérifications ne changent pas sous vos pieds :
    `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372` (v1.20.0).
 2. **Copier ce dont vous avez besoin, une fois :** la [forme échange](shapes/exchange.md) avec son
-   [exemple](shapes/examples/README.md), et les quatre vérifications de [checks/local/](checks/local/)
-   (`task_headings.py`, `task_decided.py`, `task_checks.py`, `exchange_pairs.py`, avec l'aide `_exchange.py`) dans le
+   [exemple](shapes/examples/README.md), et les cinq vérifications de [checks/local/](checks/local/)
+   (`task_headings.py`, `task_decided.py`, `task_checks.py`, `exchange_pairs.py`, `result_cost.py`, avec l'aide `_exchange.py`) dans le
    `checks/local/` de votre dépôt. Nommez chaque paire `NN-slug.task.md` et `NN-slug.result.md`. Les copies sont à
    vous ; notez le commit d'où vous les avez prises.
 3. **Configurer** avec un `checks/config.toml` :
@@ -162,7 +162,9 @@ La [fiche](standard.md) réunit cinq principes en deux groupes, chacun avec son 
 | [Run the checks at the lead](principles/result/run-the-checks-at-the-lead.md) | mesuré ; convention pour la règle | `task-checks` |
 | [Keep the result untouched](principles/result/keep-the-result-untouched.md) | convention | `exchange-pairs` |
 
-L'unique forme est l'[échange](shapes/exchange.md) : un fichier de tâche, un fichier de résultat gardé tel qu'il est revenu, et le verdict ailleurs. Son exemple travaillé est la tâche du test du brief ([décision 0004](decisions/0004-which-findings-became-principles.md)).
+L'unique forme est l'[échange](shapes/exchange.md) : un fichier de tâche, un fichier de résultat gardé tel qu'il est revenu, et le verdict ailleurs. Son exemple travaillé est la tâche du test du brief ([décision 0004](decisions/0004-which-findings-became-principles.md)). Le résultat peut finir par une ligne Cost, pour que le responsable note ce que chaque travail a dépensé.
+
+Le [protocole du chef d'orchestre](protocols/maestro.md) (en anglais) donne trois règles à qui mène beaucoup d'échanges. Le niveau le moins cher qu'un programme peut vérifier ; des vagues selon les dépendances (`protocols/schedule.py` imprime le chemin critique) ; un plafond dépensé par gain par coût. C'est une convention, pas un principe, car rien ici ne la mesure ([décision 0006](decisions/0006-the-maestro-protocol-is-not-a-principle.md), en anglais).
 
 ## La référence
 
@@ -187,6 +189,7 @@ master construit aussi le site, [tewf.github.io/ai-augmented-agents](https://tew
 | [standard](standard.md) | la fiche : cinq principes pour confier un travail d'un agent à un autre, avec leurs niveaux (en anglais) |
 | [principles](principles/) | un fichier par principe : énoncé, niveau, preuve, vérification et limites (en anglais) |
 | [shapes](shapes/) | l'échange : le fichier de tâche, le fichier de résultat et le verdict, avec un exemple travaillé (en anglais) |
+| [protocols](protocols/) | le protocole du chef d'orchestre : niveaux, ordre des travaux et plafond, avec le programme d'ordonnancement et les travaux de deux jours (en anglais) |
 | [evidence](evidence/) | la revue derrière ce dépôt : cadrage, protocole, sources, résultats, position et référence (en anglais) |
 | [experiments](experiments/) | des exécutions des questions ci-dessus, avec protocole, code et résultats (en anglais) |
 | [decisions](decisions/) | une fiche par choix qui façonne ce dépôt, chacune ouvrant sur la décision en une phrase |

@@ -28,8 +28,8 @@ Ten minutes, without reading the review. The general form is reader-ergonomics'
 1. **Pin the standard by commit**, so its checks do not change under you:
    `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372` (v1.20.0).
 2. **Copy what you need, once:** the [exchange shape](shapes/exchange.md) with its worked [example](shapes/examples/README.md),
-   and the four checks in [checks/local/](checks/local/) (`task_headings.py`, `task_decided.py`, `task_checks.py`,
-   `exchange_pairs.py`, with the helper `_exchange.py`) into your repository's `checks/local/`. Name each pair
+   and the five checks in [checks/local/](checks/local/) (`task_headings.py`, `task_decided.py`, `task_checks.py`,
+   `exchange_pairs.py`, `result_cost.py`, with the helper `_exchange.py`) into your repository's `checks/local/`. Name each pair
    `NN-slug.task.md` and `NN-slug.result.md`. The copies are yours; note the commit you copied from.
 3. **Configure** with a `checks/config.toml`:
 
@@ -159,7 +159,9 @@ The [card](standard.md) holds five principles in two groups, each with its grade
 | [Run the checks at the lead](principles/result/run-the-checks-at-the-lead.md) | measured; convention for the rule | `task-checks` |
 | [Keep the result untouched](principles/result/keep-the-result-untouched.md) | convention | `exchange-pairs` |
 
-The one shape is the [exchange](shapes/exchange.md): a task file, a result file kept as it came, and the verdict elsewhere. Its worked example is the brief test's own task ([decision 0004](decisions/0004-which-findings-became-principles.md)).
+The one shape is the [exchange](shapes/exchange.md): a task file, a result file kept as it came, and the verdict elsewhere. Its worked example is the brief test's own task ([decision 0004](decisions/0004-which-findings-became-principles.md)). The result may end with a Cost line, so the lead can record what each job spent.
+
+For a lead running many exchanges, the [maestro protocol](protocols/maestro.md) gives three rules: the cheapest tier a program can check, waves from dependencies (`protocols/schedule.py` prints the critical path), a cap spent by gain per cost. It is a convention, not a principle, because nothing here measures it ([decision 0006](decisions/0006-the-maestro-protocol-is-not-a-principle.md)).
 
 ## The baseline
 
@@ -184,6 +186,7 @@ master also renders the site, [tewf.github.io/ai-augmented-agents](https://tewf.
 | [standard](standard.md) | the card: five principles on handing work from one agent to another, with their grades |
 | [principles](principles/) | one file per principle: claim, grade, evidence, check, and where it stops |
 | [shapes](shapes/) | the exchange: the task file, the result file and the verdict, with a worked example |
+| [protocols](protocols/) | the maestro protocol: tiers, order of jobs and the cap, with the scheduling program and the jobs of two days |
 | [evidence](evidence/) | the review behind this repository: frame, protocol, sources, findings, position and baseline |
 | [experiments](experiments/) | runs of the questions above, with protocol, code and results |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |

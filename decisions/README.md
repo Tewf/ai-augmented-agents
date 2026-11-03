@@ -12,6 +12,7 @@ decision in one sentence under its title, then its status, context, decision and
 | [0003 The brief is tested on one small task first](0003-the-brief-is-tested-on-one-small-task.md) | The brief finding is answered by a small run: one checkable task, three briefs, ten runs each, judged by a program |
 | [0004 Five findings became principles, the rest stayed findings](0004-which-findings-became-principles.md) | A finding becomes a principle when it is graded measured or supported with caveat and a program checks it; the others stay findings |
 | [0005 Listing the checks is not shown to help on unseen cases](0005-listing-the-checks-is-not-a-gain-on-unseen-cases.md) | Round two found no gain from listing the checks on hidden cases, so the principle loses its pass-rate claim |
+| [0006 The maestro protocol stays a convention](0006-the-maestro-protocol-is-not-a-principle.md) | The tier, order and cap rules are a protocol and a program graded convention; no principle, because nothing here measures them |
 
 ## See also
 

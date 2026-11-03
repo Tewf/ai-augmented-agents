@@ -26,3 +26,8 @@ Each page's markdown source is served at the same path with a .md extension.
 - [Bibliography](https://tewf.github.io/ai-augmented-agents/evidence/bibliography.md): every cited work, once
 - [Shapes](https://tewf.github.io/ai-augmented-agents/shapes/README.md): skeletons for kinds of documents
 - [Decisions](https://tewf.github.io/ai-augmented-agents/decisions/README.md): the choices this repository made, one record each
+
+<!-- hand -->
+## Protocols
+
+- [The maestro protocol](https://tewf.github.io/ai-augmented-agents/protocols/maestro.md): tiers cheapest first, jobs in the waves their dependencies allow, a cap spent by expected gain per cost; a convention.

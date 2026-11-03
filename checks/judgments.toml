@@ -149,21 +149,21 @@ answer = "Yes: the claim is about work that leaves the lead, and `Why handed ove
 check = "name-content"
 path = "shapes/exchange.md"
 question = "the name 'exchange' and the opening are far apart in meaning (0.19): does the name predict the content?"
-file = "62cfd23ae8dd"
+file = "e68d9176f7c0"
 answer = "Yes: an `exchange` is the task file out and the result file back, and the opening says that the pair is the unit."
 
 [[answer]]
 check = "logical-lines"
 path = "README.fr.md"
-question = "104 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "e6a1fe157ea5"
+question = "115 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "b1603f3ef9a0"
 answer = "Il peut rester : son rôle est la page d'accueil, une phrase, `État`, `L'adopter` et la carte des parties, sans partie en double."
 
 [[answer]]
 check = "logical-lines"
 path = "README.md"
-question = "102 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "aee164ae4f9a"
+question = "112 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "fc31365152cc"
 answer = "It may stay: its role is the front page, one sentence, `Status`, `Take it` and the map of the parts, with no part held twice."
 
 [[answer]]
@@ -226,35 +226,35 @@ answer = "One mode: understanding why. The numbered steps of `L'adopter` are a s
 check = "logical-lines"
 path = "README.fr.md"
 question = "110 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "23a604135ca3"
+file = "dfad5b02da42"
 answer = "It stays: its one role is the French front page. `Ce que la revue a trouvé` is one of its sections, not a second role."
 
 [[answer]]
 check = "logical-lines"
 path = "README.md"
 question = "108 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "2dffbbb5e25b"
+file = "5f2470974769"
 answer = "It stays: its one role is the front page of the repository. `What the review found` is one section of that role."
 
 [[answer]]
 check = "logical-lines"
 path = "evidence/multi-agent-teams/protocol.md"
-question = "116 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "7dd6bb6b5941"
+question = "117 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "5a50cc7e4150"
 answer = "It stays: its one role is `Protocol: how the pool was built`. The forward search and the second rater are steps of that one procedure, numbered after it."
 
 [[answer]]
 check = "figures-present"
 path = "evidence/multi-agent-teams/review.md"
 question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
-file = "5a02088151ca"
+file = "63cfcf216184"
 answer = "Partly: each strand under `Existing reviews` is a list of one finding per line. Comparisons across strands are tables in the state of the art file. No figure is planned for this first pass."
 
 [[answer]]
 check = "document-mode"
 path = "README.fr.md"
 question = "reads about equally as how-to and tutorial: one mode per document?"
-file = "23a604135ca3"
+file = "dfad5b02da42"
 answer = "Reference: the front page is read for its findings, under `Ce que la revue a trouvé`, and for its file table. It holds no procedure, so it is not a how-to."
 
 [[answer]]
@@ -274,8 +274,8 @@ answer = "Explanation: it states what each tradition measured, under `Existing r
 [[answer]]
 check = "name-content"
 path = "evidence/multi-agent-teams/position.md"
-question = "the name 'position' and the opening are far apart in meaning (0.05): does the name predict the content?"
-file = "a4fd058ae6d6"
+question = "the name 'position' and the opening are far apart in meaning (0.19): does the name predict the content?"
+file = "1c9a1dfc22ea"
 answer = "Yes, once the name is read as the review's step: the title `Position: what is known, what is not, and what this repository adds` says what the file holds."
 
 [[answer]]
@@ -288,6 +288,41 @@ answer = "Yes: the title `Review: what each tradition has measured` says what th
 [[answer]]
 check = "name-content"
 path = "evidence/multi-agent-teams/state-of-the-art.md"
-question = "the name 'state' and the opening are far apart in meaning (0.02): does the name predict the content?"
-file = "ca185fa943bc"
+question = "the name 'state' and the opening are far apart in meaning (0.06): does the name predict the content?"
+file = "6ab82f5d2740"
 answer = "Yes: the title `State of the art: the best evidence and the practice most adopted` names the file's content."
+
+[[answer]]
+check = "logical-lines"
+path = "evidence/multi-agent-teams/sources.md"
+question = "81 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "b8bcdbd9903a"
+answer = "It stays: `Sources: the pool, its flow and its quality` is one role, the sources of the review in a table per kind, and the length is the count of its rows."
+
+[[answer]]
+check = "co-change"
+path = ".github/workflows/checks.yml"
+question = "changed together with checks/config.toml in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "5a73c0927865"
+answer = "They stay apart: `.github/workflows/checks.yml` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "co-change"
+path = "AGENTS.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "a2e0c0994bb6"
+answer = "They stay apart: `AGENTS.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/baseline.md"
+question = "reads about equally as how-to and reference: one mode per document?"
+file = "c04c2fa8a3fc"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `Baseline: the arrangement this repository is compared against` names the one thing it holds."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/protocol.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "5a50cc7e4150"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `Protocol: how the pool was built` names the one thing it holds."

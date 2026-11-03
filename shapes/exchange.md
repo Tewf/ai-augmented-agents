@@ -23,6 +23,7 @@ This shape hands one piece of work from one agent to another and gets it back. T
 | To find | what the result must contain, and in what shape | output format advised for a brief (Anthropic 2025) | convention, no ablation |
 | Checks | the commands the lead runs on the result, each with the cases it covers | listing the checks moved a small model from 0 of 10 to 5 of 10 on one task (brief test) | supported with caveat |
 | Result | the worker's reply, as it came | verification is one of three failure groups (Cemri 2025) | convention for keeping it apart |
+| Cost line | the last line of the result, `Cost: <n> tokens, <n> dollars, <n> minutes`, so the lead can record what the work spent | the recorded quantities are what an allocation by gain per cost needs ([the maestro protocol](../protocols/maestro.md)) | convention, untested |
 | Verdict | the lead's outcome of the checks, in another file that links the result | errors grew 17.2 times without a central check and 4.4 times with one (Kim 2025) | measured, for the central check |
 
 Whether the shape as a whole helps is untested: the [baseline](../evidence/multi-agent-teams/baseline.md) names the arrangement it should be compared with. Each key (Author Year) is listed in the [bibliography](../evidence/bibliography.md).
@@ -62,7 +63,7 @@ The task file, `NN-slug.task.md`:
 
 ## To find
 
-<What the result must contain, and its shape.>
+<What the result must contain, and its shape. End with a line `Cost: <n> tokens, <n> dollars, <n> minutes`.>
 
 ## Checks
 
@@ -70,7 +71,7 @@ The task file, `NN-slug.task.md`:
   - <A case the command covers.>
 ```
 
-The result file, `NN-slug.result.md`, is the worker's reply, saved as it came. It has no skeleton: nothing is added to it.
+The result file, `NN-slug.result.md`, is the worker's reply, saved as it came. It has no skeleton: nothing is added to it, but when the task asks, the reply ends with its Cost line.
 
 The verdict is a line or a row in a file of the lead's, such as a log of results, naming the result file, the commands run and their outcome.
 
@@ -83,6 +84,8 @@ The verdict is a line or a row in a file of the lead's, such as a log of results
 5. The checks are written before the work leaves.
 6. The result is never edited, and holds no verdict: no section named Verdict, Review, Accepted, Rejected or Decision.
 7. The verdict names the result and the checks run on it, and lives in another file.
+
+8. A task that asks for it ends To find with the Cost line, and the result then ends with a line `Cost:` of numbers with units from tokens, points, dollars and minutes, each at most once. The worker states it; the lead may correct it in the verdict, never in the result.
 
 ## Worked example
 

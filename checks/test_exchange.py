@@ -28,7 +28,8 @@ def load(name: str):
     return module
 
 
-headings, decided, commands, pairs = load("task_headings"), load("task_decided"), load("task_checks"), load("exchange_pairs")
+headings, decided, commands, pairs, cost = (load("task_headings"), load("task_decided"), load("task_checks"),
+                                            load("exchange_pairs"), load("result_cost"))
 
 TASK = """# 01: list the rows
 
@@ -173,6 +174,47 @@ class ExchangePairs(Base):
         self.git_free({"01-rows.task.md": TASK, "01-rows.result.md": RESULT + "\n## Review\n"})
         config = {"scope": {"exclude": ["*.result.md"]}}
         self.assertEqual(len(self.run_check(pairs, config)), 1)
+
+
+ASKING = TASK.replace("The rows.", "The rows. End with a line `Cost: <n> tokens, <n> dollars, <n> minutes`.")
+
+
+class ResultCost(Base):
+    def test_a_result_with_a_cost_line_passes(self):
+        self.write("01-rows.task.md", ASKING)
+        self.write("01-rows.result.md", RESULT + "Cost: 4000 tokens, 0.02 dollars, 3 minutes\n")
+        self.assertEqual(self.run_check(cost), [])
+
+    def test_a_missing_line_fails_when_the_task_asks(self):
+        self.write("01-rows.task.md", ASKING)
+        self.write("01-rows.result.md", RESULT)
+        self.assertIn("none", self.run_check(cost)[0].message)
+
+    def test_a_task_that_does_not_ask_is_not_read(self):
+        self.write("01-rows.task.md", TASK)
+        self.write("01-rows.result.md", RESULT)
+        self.assertEqual(self.run_check(cost), [])
+
+    def test_a_unit_that_is_not_one_fails(self):
+        self.write("01-rows.task.md", ASKING)
+        self.write("01-rows.result.md", RESULT + "Cost: 4 bananas\n")
+        self.assertIn("bananas", self.run_check(cost)[0].message)
+
+    def test_a_number_without_a_unit_fails(self):
+        self.write("01-rows.task.md", ASKING)
+        self.write("01-rows.result.md", RESULT + "Cost: 4000\n")
+        self.assertEqual(len(self.run_check(cost)), 1)
+
+    def test_a_repeated_unit_fails(self):
+        self.write("01-rows.task.md", ASKING)
+        self.write("01-rows.result.md", RESULT + "Cost: 4 minutes, 5 minutes\n")
+        self.assertIn("twice", self.run_check(cost)[0].message)
+
+    def test_the_line_is_read_in_a_result_the_scope_excludes(self):
+        self.write("01-rows.task.md", ASKING)
+        self.write("01-rows.result.md", RESULT)
+        config = {"scope": {"exclude": ["*.result.md"]}}
+        self.assertEqual(len(self.run_check(cost, config)), 1)
 
 
 if __name__ == "__main__":

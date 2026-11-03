@@ -1,0 +1,108 @@
+# The jobs of the maintainer's two days (2026-11-02 and 2026-11-03), as the maintainer's log of those days
+# records them. The dependencies are read from the log's reasons (what read whose output, what waited for an
+# approval); the cost is an estimate in thousands of tokens, 250 where the log gives about that and 150 elsewhere,
+# and PROVISIONAL until the quantities are recorded per job. `taken` is the wave the log shows the job run in.
+# No gain is set: nobody has estimated one, so `--rank` chooses nothing.
+
+[jobs.review-a]
+cost = 250
+taken = 1
+[jobs.review-b]
+cost = 250
+taken = 1
+[jobs.review-c]
+cost = 250
+taken = 1
+[jobs.review-d]
+cost = 250
+taken = 1
+[jobs.review-e]
+cost = 326
+taken = 2
+[jobs.review-f]
+cost = 250
+taken = 2
+[jobs.review-g]
+cost = 250
+taken = 2
+[jobs.review-h]
+cost = 250
+taken = 2
+
+[jobs.audits]
+after = ["review-a", "review-b", "review-c", "review-d", "review-e", "review-f", "review-g"]
+cost = 150
+taken = 3
+[jobs.second-case]
+after = ["review-e"]
+cost = 250
+taken = 3
+[jobs.blueprint-build]
+cost = 250
+taken = 3
+[jobs.design-document]
+after = ["review-b"]
+cost = 250
+taken = 3
+
+[jobs.cost-measure]
+after = ["review-d", "review-e"]
+cost = 250
+taken = 4
+[jobs.project-shape]
+after = ["design-document"]
+cost = 250
+taken = 4
+[jobs.brief-test]
+after = ["review-c"]
+cost = 150
+taken = 4
+
+[jobs.ide-design]
+after = ["review-h", "design-document"]
+cost = 250
+taken = 5
+[jobs.method-revision]
+after = ["ide-design"]
+cost = 150
+taken = 6
+[jobs.blueprint-comparator]
+after = ["blueprint-build"]
+cost = 150
+taken = 6
+[jobs.approval]
+after = ["method-revision"]
+cost = 0
+taken = 7
+[jobs.ide-spike]
+after = ["approval"]
+cost = 250
+taken = 8
+[jobs.card-cycle]
+after = ["project-shape", "method-revision", "blueprint-comparator", "brief-test"]
+cost = 250
+taken = 9
+[jobs.closing-cycle]
+after = ["card-cycle"]
+cost = 250
+taken = 10
+[jobs.shapes-meet-practice]
+after = ["closing-cycle"]
+cost = 150
+taken = 11
+[jobs.ide-spike-rerun]
+after = ["ide-spike"]
+cost = 150
+taken = 11
+[jobs.method-comparison]
+after = ["project-shape"]
+cost = 150
+taken = 12
+[jobs.brief-test-round-two]
+after = ["brief-test"]
+cost = 150
+taken = 12
+[jobs.overlap-pass]
+after = ["review-g"]
+cost = 150
+taken = 12
