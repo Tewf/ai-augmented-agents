@@ -27,3 +27,17 @@ family = ["reader-ergonomics",
           "reader-ergonomics-topic",
           "reader-ergonomics-blueprint"]
 shared_links = []
+
+# The result of an exchange is a worker's reply kept as it came (shapes/exchange.md, rule 6), so the prose checks leave
+# it alone; exchange-pairs reads it through the repository's file list. The first three are the standard's own.
+[scope]
+exclude = ["LICENSE", "LICENSES/", "checks/out/", "shapes/examples/*.result.md"]
+
+# The exchange checks, checks/local/: the file names, the four headings, the two lines of Decided, and the words
+# that mark a verdict (shapes/exchange.md).
+[exchange]
+task_files = ["*.task.md"]
+result_files = ["*.result.md"]
+headings = ["Task", "Decided", "To find", "Checks"]
+decided_labels = ["Why handed over", "If the check fails"]
+verdict_headings = ["Verdict", "Review", "Accepted", "Rejected", "Decision"]
