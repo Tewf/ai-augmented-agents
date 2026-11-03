@@ -2,6 +2,8 @@
 
 Step 2 of the review. It groups the 39 sources by strand and answers Q1 to Q4 of [frame](frame.md).
 
+**Shape:** [review](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/review.md)
+
 Grades: measured, supported with caveat, convention, not supported. A number read only in an abstract is marked (secondary). Keys are in the [bibliography](../bibliography.md).
 
 ## 0. Existing reviews

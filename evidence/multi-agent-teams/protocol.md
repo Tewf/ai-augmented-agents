@@ -3,6 +3,8 @@
 A first pass, run on 2026-11-02 by one reviewer, and extended on 2026-11-03 with a forward search and a second rater for the grey sources (sections 11 and 12). Terms are in [frame](frame.md); the pool is in [sources](sources.md).
 The method is the multivocal review of Garousi 2019.
 
+**Shape:** [protocol](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/protocol.md)
+
 ## 1. Why grey literature
 
 Garousi 2019, Table 4, seven questions.

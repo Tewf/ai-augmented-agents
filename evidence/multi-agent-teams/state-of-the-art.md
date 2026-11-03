@@ -2,6 +2,8 @@
 
 Step 3 of the review. For each question, the **best evidence** (a research record) stands apart from the **practice most adopted** (a practice record), and what has been achieved stands apart from what is proved impossible. Keys are in the [bibliography](../bibliography.md).
 
+**Shape:** [state of the art](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/state-of-the-art.md)
+
 ## Q1: delegate or do
 
 | Record | Holder | What it shows | Grade |

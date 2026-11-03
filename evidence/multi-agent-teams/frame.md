@@ -3,6 +3,8 @@
 Step 1 of the review. It says the problem in one sentence, then the names the field and practice give it.
 Terms are defined here once; the searches are in [protocol](protocol.md).
 
+**Shape:** [frame](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/frame.md)
+
 ## The problem
 
 When several **agents** (people or programs acting for a goal) work one project, who hands what to whom, and what keeps them pulling the same way?

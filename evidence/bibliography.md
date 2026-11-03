@@ -2,6 +2,8 @@
 
 Every work this repository cites, once: Key, citation, and a stable link.
 
+**Shape:** [references](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/references.md)
+
 | Key | Citation | Link |
 |---|---|---|
 | Anthropic 2024 | Anthropic (2024-12-19). Building effective agents. Engineering post. Read in full | https://www.anthropic.com/engineering/building-effective-agents |

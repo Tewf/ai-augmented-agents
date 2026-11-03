@@ -2,6 +2,8 @@
 
 Evidence against a claim of [review](review.md), kept beside it. Keys are in the [bibliography](../bibliography.md).
 
+**Shape:** [against](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/against.md)
+
 ## Many agents do not reliably win
 
 - Gains on popular benchmarks are often minimal, which is why Cemri 2025 built its taxonomy (secondary, from its abstract).

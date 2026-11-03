@@ -2,6 +2,8 @@
 
 Step 5 of the review. It names the baseline, says what it measured, and compares it with the best arrangement the review found. The facts about the arrangement are the maintainer's practice, written down for this review; the counts come from his notes and are secondary here. Keys are in the [bibliography](../bibliography.md).
 
+**Shape:** [baseline](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/baseline.md)
+
 ## B1, one coordinating session and six owners
 
 **B1** is the maintainer's arrangement of 2026-10-29. Six sessions worked six public repositories at once, and one session answered for the maintainer.

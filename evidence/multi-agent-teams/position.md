@@ -2,6 +2,8 @@
 
 Step 4 of the review. It keeps "nobody has done this" apart from "we have not done this here". Keys are in the [bibliography](../bibliography.md).
 
+**Shape:** [position](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/position.md)
+
 ## Known
 
 - The economics of teams and delegation is old and has models (Marschak 1972; Holmström 1982), for people.

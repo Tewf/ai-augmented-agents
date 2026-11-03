@@ -149,7 +149,7 @@ answer = "Yes: the claim is about work that leaves the lead, and `Why handed ove
 check = "name-content"
 path = "shapes/exchange.md"
 question = "the name 'exchange' and the opening are far apart in meaning (0.19): does the name predict the content?"
-file = "e68d9176f7c0"
+file = "f36348f52841"
 answer = "Yes: an `exchange` is the task file out and the result file back, and the opening says that the pair is the unit."
 
 [[answer]]
@@ -254,7 +254,7 @@ answer = "Partly: each strand under `Existing reviews` is a list of one finding 
 check = "document-mode"
 path = "README.fr.md"
 question = "reads about equally as how-to and tutorial: one mode per document?"
-file = "dfad5b02da42"
+file = "b1603f3ef9a0"
 answer = "Reference: the front page is read for its findings, under `Ce que la revue a trouvé`, and for its file table. It holds no procedure, so it is not a how-to."
 
 [[answer]]
@@ -326,3 +326,24 @@ path = "evidence/multi-agent-teams/protocol.md"
 question = "reads about equally as reference and how-to: one mode per document?"
 file = "5a50cc7e4150"
 answer = "Reference: the file follows its shape and is consulted part by part; its heading `Protocol: how the pool was built` names the one thing it holds."
+
+[[answer]]
+check = "document-mode"
+path = "README.fr.md"
+question = "reads about equally as how-to and tutorial: one mode per document?"
+file = "b1603f3ef9a0"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `Agents augmentés par l'IA` names the one thing it holds."
+
+[[answer]]
+check = "document-mode"
+path = "protocols/maestro.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "33cb3d26e0b7"
+answer = "Reference: the file follows its shape and is consulted part by part; its heading `The maestro protocol: tiers, order and cap` names the one thing it holds."
+
+[[answer]]
+check = "name-content"
+path = "shapes/exchange.md"
+question = "the name 'exchange' and the opening are far apart in meaning (0.19): does the name predict the content?"
+file = "f36348f52841"
+answer = "The name predicts the content: the file opens with the heading `Shape: exchange`, which says what it holds."
