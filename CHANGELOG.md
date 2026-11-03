@@ -7,6 +7,7 @@ A pin move is recorded here, not in decisions/.
 
 ### Added
 
+- Pinned reader-ergonomics v1.21.0 (`2e5b6f0`), from v1.20.0 (`4f99372`): duplication skips the lines a declared shape prescribes
 - Round two of the brief test: 180 calls, three tasks, two model tiers, judged by hidden cases, with its protocol,
   code, tests and results, and decision 0005.
 
