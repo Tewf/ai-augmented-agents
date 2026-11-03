@@ -43,7 +43,7 @@ A program, never the model.
 ## Design
 
 - Ten runs per task per arm per tier. Runs are interleaved across tiers, tasks and arms, so drift falls on all cells alike.
-- Same sampling settings in a tier: temperature 0.2 on both tiers; the hosted small model's wrapper sets it, and the paid tier's caller sets the same value.
+- Same sampling settings within a tier. The hosted small model's wrapper sets temperature 0.2; the paid model refuses a temperature (its API reports the parameter as deprecated), so it runs at its default. The tiers therefore differ in sampling as well as in model.
 - A failed call is retried once; a call that fails twice is recorded as an error, left out of the rates, and tried again when the run is resumed.
 - The paid tier is called with the Messages API through urllib ([claude_call.py](claude_call.py)). Its key is read into the environment of the run only, never printed or stored.
 - Every reply and verdict is kept in [results-2.jsonl](results-2.jsonl), written as each call ends.

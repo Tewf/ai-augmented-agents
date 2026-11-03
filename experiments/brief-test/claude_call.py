@@ -13,7 +13,7 @@ def main():
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key or len(sys.argv) < 2:
         sys.exit("usage: ANTHROPIC_API_KEY=... claude_call.py \"prompt\"")
-    body = {"model": os.environ.get("CLAUDE_MODEL", "claude-haiku-5-5"), "max_tokens": 4096, "temperature": 0.2,
+    body = {"model": os.environ.get("CLAUDE_MODEL", "claude-haiku-5-5"), "max_tokens": 4096,
             "messages": [{"role": "user", "content": sys.argv[1]}]}
     req = urllib.request.Request("https://api.anthropic.com/v1/messages", data=json.dumps(body).encode(),
                                  headers={"x-api-key": key, "anthropic-version": "2023-06-01",
