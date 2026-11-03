@@ -25,10 +25,10 @@ Cette page en anglais : [README.md](README.md). Les deux versions suivent le mê
 ## L'adopter
 
 Dix minutes, sans lire la revue. La forme générale est la section « Take your own version » de
-[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version) ; la voici pour la remise de travail entre agents.
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version) ; la voici pour la remise de travail entre agents.
 
 1. **Épingler la norme par son commit**, pour que ses vérifications ne changent pas sous vos pieds :
-   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372` (v1.20.0).
 2. **Copier ce dont vous avez besoin, une fois :** la [forme échange](shapes/exchange.md) avec son
    [exemple](shapes/examples/README.md), et les quatre vérifications de [checks/local/](checks/local/)
    (`task_headings.py`, `task_decided.py`, `task_checks.py`, `exchange_pairs.py`, avec l'aide `_exchange.py`) dans le
@@ -75,7 +75,7 @@ digraph where_it_sits {
 
 - **Il utilise [ai-augmented-project](https://github.com/Tewf/ai-augmented-project)** comme unité : un agent sur une
   étape est le cas de ce dépôt-là ; celui-ci arrange les unités.
-- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) et exécute ses vérifications en CI.
+- **Il obéit à [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md)** (v1.20.0) et exécute ses vérifications en CI.
 - **Il ne pointe que vers le bas.** La carte de la famille est [ai-augmented](https://github.com/Tewf/ai-augmented).
 
 ## Périmètre
@@ -152,7 +152,7 @@ Deuxième série : trois tâches, deux niveaux (un petit modèle hébergé et cl
 
 ## La norme
 
-La [fiche](standard.md) réunit cinq principes en deux groupes, chacun avec son niveau de preuve et une vérification qui tourne en CI. Lisez d'abord [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md).
+La [fiche](standard.md) réunit cinq principes en deux groupes, chacun avec son niveau de preuve et une vérification qui tourne en CI. Lisez d'abord [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md).
 
 | Principe | Niveau | Vérification |
 |---|---|---|
@@ -171,7 +171,7 @@ L'unique forme est l'[échange](shapes/exchange.md) : un fichier de tâche, un f
 ## Vérifier
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372
 python3 reader-ergonomics/checks/run.py chemin/vers/ce/depot
 ```
 

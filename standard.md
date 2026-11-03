@@ -1,10 +1,10 @@
 # The agents standard
 
-What handing work from one agent to another shares, as far as the evidence goes. It covers the task file the lead writes, the result file the worker returns, and the checks the lead runs on it. It extends [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md), the standard for any reader: read that one first. This page adds only what several agents change, since the reader of a task is a worker that knows nothing else.
+What handing work from one agent to another shares, as far as the evidence goes. It covers the task file the lead writes, the result file the worker returns, and the checks the lead runs on it. It extends [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md), the standard for any reader: read that one first. This page adds only what several agents change, since the reader of a task is a worker that knows nothing else.
 
 The evidence is one review of 35 sources and one small run on the brief ([evidence](evidence/README.md), [experiments](experiments/README.md)). It is a first pass, not a result.
 
-Grades mean what they mean in [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md#grades). Each principle states its grade and never claims more.
+Grades mean what they mean in [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md#grades). Each principle states its grade and never claims more.
 
 ## Principles
 

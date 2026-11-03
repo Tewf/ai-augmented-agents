@@ -23,10 +23,10 @@ This page in French: [README.fr.md](README.fr.md).
 ## Take it
 
 Ten minutes, without reading the review. The general form is reader-ergonomics'
-[Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version); here it is for handing work between agents.
+[Take your own version](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/README.md#take-your-own-version); here it is for handing work between agents.
 
 1. **Pin the standard by commit**, so its checks do not change under you:
-   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372` (v1.20.0).
 2. **Copy what you need, once:** the [exchange shape](shapes/exchange.md) with its worked [example](shapes/examples/README.md),
    and the four checks in [checks/local/](checks/local/) (`task_headings.py`, `task_decided.py`, `task_checks.py`,
    `exchange_pairs.py`, with the helper `_exchange.py`) into your repository's `checks/local/`. Name each pair
@@ -72,7 +72,7 @@ digraph where_it_sits {
 
 - **It uses [ai-augmented-project](https://github.com/Tewf/ai-augmented-project)** as the unit: one agent on one step is
   that repository's case; this one arranges the units.
-- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md)** (v1.19.2) and runs its checks in CI.
+- **It obeys [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md)** (v1.20.0) and runs its checks in CI.
 - **It links down only.** The family's map is [ai-augmented](https://github.com/Tewf/ai-augmented).
 
 ## Scope
@@ -149,7 +149,7 @@ Round two: three tasks, two tiers (a small hosted model and claude-haiku-5-5), 1
 
 ## The standard
 
-The [card](standard.md) holds five principles in two groups, each with its grade and a check that runs in CI. Read [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/standard.md) first.
+The [card](standard.md) holds five principles in two groups, each with its grade and a check that runs in CI. Read [reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/4f99372093729dacf982e9174e94f6b8793c513d/standard.md) first.
 
 | Principle | Grade | Check |
 |---|---|---|
@@ -168,7 +168,7 @@ The one shape is the [exchange](shapes/exchange.md): a task file, a result file 
 ## Check it
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout 4f99372
 python3 reader-ergonomics/checks/run.py path/to/this/repository
 ```
 
