@@ -21,12 +21,34 @@ The pool of the review, read on 2026-11-02 and extended on 2026-11-03: 39 source
 ## Grey sources, scored on Garousi 2019
 
 Subtotals: authority, methodology, objectivity, date, position, novelty, impact, outlet. Tier 3 (blog) scores 0 for outlet.
+The "review" column is the score of the first pass; the score in use is the one after rereading (section below).
 
-| Key | Tier | Score | Subtotals | Use |
-|---|---|---|---|---|
-| Anthropic 2025 | 3 | 13.5 of 20 | 4 / 3 / 2 / 1 / 0.5 / 2 / 1 / 0 | support, as its owner's claim |
-| Anthropic 2024 | 3 | 11.5 of 20 | 4 / 2 / 2 / 1 / 0.5 / 1 / 1 / 0 | support, as its owner's claim |
-| Cognition 2025 | 3 | 10.5 of 20 | 3 / 1 / 2 / 1 / 0.5 / 2 / 1 / 0 | support, as its owner's claim; no data |
+| Key | Tier | Score in use | Review | Subtotals in use | Use |
+|---|---|---|---|---|---|
+| Anthropic 2025 | 3 | 14.5 of 20 | 13.5 | 3.5 / 5 / 1.5 / 1 / 0.5 / 2 / 1 / 0 | support, as its owner's claim |
+| Anthropic 2024 | 3 | 11.5 of 20 | 11.5 | 3.5 / 3.5 / 1.5 / 1 / 0.5 / 1 / 0.5 / 0 | support, as its owner's claim |
+| Cognition 2025 | 3 | 12 of 20 | 10.5 | 3 / 4 / 1 / 1 / 1 / 2 / 0 / 0 | support, as its owner's claim; no data |
+
+### Changed on rereading
+
+Each source was reread in full and scored item by item on the twenty criteria. Every change below has its reason; a score that did not change is not listed.
+
+- **All three, authority, A3 (author's other work):** 1 to 0.5 for the two Anthropic posts, and 0 for Cognition. The text shows no other work by the named authors. The company's later pages are not theirs.
+- **All three, date, D1:** kept at 1. The page carries a published date in its metadata. The text also dates itself: a note on the 2024 post and a line on the 2025 one.
+- **All three, outlet:** kept at 0. These are company blog posts, which the criteria list as blogs. The criteria also list company pages at 0.5, so the line between the two is open (see [protocol](protocol.md), section 8).
+- **Anthropic 2024:** methodology 2 to 3.5. The post names its basis, work with customers. It asks a specific question, when to use agents, and works two domains in its appendix.
+- **Anthropic 2024:** objectivity 2 to 1.5. A company page promoting its own patterns scores 0 on O3. Its conclusions are observed, not tested, so O4 is 0.5.
+- **Anthropic 2024:** impact 1 to 0.5. The only sign of uptake is the owner's own "dozens of teams".
+- **Anthropic 2025:** methodology 3 to 5. The post states its analysis (M2 0.5). It cites one published benchmark (M3 0.5). It states a downside, about 15 times the tokens of a chat, and a section on production challenges (M4 1). It describes one system in depth (M6 1).
+- **Anthropic 2025:** objectivity 2 to 1.5. The 90.2% figure comes with no sample or variance, so O4 is 0.5. Impact stays at 1: users' reports and a product in production.
+- **Cognition 2025:** methodology 1 to 4. The post states its aim (M1 1). Its principles come from building agents (M2 0.5). It says its theories may be wrong (M4 1). It asks a specific question (M5 1). It reasons from two examples (M6 0.5).
+- **Cognition 2025:** objectivity 2 to 1. The post ends with a link to its own product, so O3 is 0. It argues from examples, with no data, so O4 is 0.
+- **Cognition 2025:** position 0.5 to 1. It names and links Swarm and AutoGen.
+- **Cognition 2025:** impact 1 to 0. Nothing in the text shows uptake by others.
+
+### Second rater
+
+A second rater, a language model given the criteria and the text of each source, scored each source once, in two passes: the first pass saw the first 12,000 characters, the second the whole text. Agreement with the first pass of the review, and with the score in use, is in [protocol](protocol.md), section 12.
 
 ## The pool
 
