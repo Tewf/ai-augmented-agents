@@ -179,3 +179,17 @@ path = "shapes/exchange.md"
 question = "the name 'exchange' and the opening are far apart in meaning (0.19): does the name predict the content?"
 file = "62cfd23ae8dd"
 answer = "Yes: an `exchange` is the task file out and the result file back, and the opening says that the pair is the unit."
+
+[[answer]]
+check = "co-change"
+path = "README.fr.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "0fe5e9e0928b"
+answer = "They stay apart and already link: the front page lists `decisions` in its `Contenu` table, and the folder README lists each record, so each new record touches both."
+
+[[answer]]
+check = "co-change"
+path = "README.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "c59bc3af5215"
+answer = "They stay apart and already link: the front page lists `decisions` in its `Contents` table, and the folder README lists each record, so each new record touches both."
