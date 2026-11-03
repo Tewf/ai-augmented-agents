@@ -240,7 +240,7 @@ answer = "It stays: its one role is the front page of the repository. `What the 
 check = "logical-lines"
 path = "evidence/multi-agent-teams/protocol.md"
 question = "116 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
-file = "3203a4c1e241"
+file = "7dd6bb6b5941"
 answer = "It stays: its one role is `Protocol: how the pool was built`. The forward search and the second rater are steps of that one procedure, numbered after it."
 
 [[answer]]
