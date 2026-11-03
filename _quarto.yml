@@ -12,12 +12,21 @@ project:
 
 website:
   title: "AI-augmented agents"
+  description: "How to hand work from one agent to another, by what a first review of 35 sources and one small run found: the task file, the result file and the checks the lead runs, each principle with its grade of evidence."
   site-url: "https://tewf.github.io/ai-augmented-agents/"
   repo-url: "https://github.com/Tewf/ai-augmented-agents"
   repo-actions: [source, issue]
   page-navigation: true
   navbar:
     left:
+      - text: Standard
+        href: standard.md
+      - text: Principles
+        href: principles/index.qmd
+      - text: Shapes
+        href: shapes/index.qmd
+      - text: Evidence
+        href: evidence/index.qmd
       - text: Decisions
         href: decisions/README.md
     right:

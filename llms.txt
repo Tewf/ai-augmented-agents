@@ -1,21 +1,28 @@
 # AI-augmented agents
 
-> Several agents, people and language models, on one project: delegation, coordination and incentives, with the tools of game theory, team theory and multi-agent reinforcement learning. A first review pass is written; the baseline is named; one small run tests the brief.
+> How to hand work from one agent to another, by what a first review of 35 sources and one small run found: the task file, the result file and the checks the lead runs, each principle with its grade of evidence.
 
-Each page's markdown source is served at the same path with a .md extension. This index is written by hand; AGENTS.md says to keep it in step.
+Each page's markdown source is served at the same path with a .md extension.
 
-## The repository
+## Standard
 
-- [AI-augmented agents](https://tewf.github.io/ai-augmented-agents/README.md): the scope, the first job and the questions its review must answer
-- [Decisions](https://tewf.github.io/ai-augmented-agents/decisions/README.md): one record per choice that shapes the repository
-
-- [Experiments](https://tewf.github.io/ai-augmented-agents/experiments/README.md): runs with protocol, code and results
-- [Brief test](https://tewf.github.io/ai-augmented-agents/experiments/brief-test/protocol.md): three briefs, ten runs each, judged by unit tests
-
-- [Evidence](https://tewf.github.io/ai-augmented-agents/evidence/README.md): the review behind the repository
-- [Multi-agent teams](https://tewf.github.io/ai-augmented-agents/evidence/multi-agent-teams/README.md): the first pass, 35 sources, with the baseline B1
-
-## Contributing
-
+- [Standard](https://tewf.github.io/ai-augmented-agents/standard.md): the one-page card to follow, with every principle and its grade
 - [Contributing](https://tewf.github.io/ai-augmented-agents/AGENTS.md): rules for changing this repository
-- [Standard](https://tewf.github.io/reader-ergonomics/standard.md): the reader-ergonomics card this repository obeys
+
+## Brief: what a task file holds
+
+- [Escalate on a failed check](https://tewf.github.io/ai-augmented-agents/principles/brief/escalate-on-a-failed-check.md): a task file says what happens when its check fails, by default a stronger worker or the lead, never an unchecked retry.
+- [List the checks](https://tewf.github.io/ai-augmented-agents/principles/brief/list-the-checks.md): a task file lists the checks that will judge the result, as commands, under four headings in a fixed order: Task, Decided, To find and Checks.
+- [Say why it is handed over](https://tewf.github.io/ai-augmented-agents/principles/brief/say-why-handed-over.md): a task file says why this work leaves the lead, with the lead doing it alone as the default.
+
+## Result: what comes back
+
+- [Keep the result untouched](https://tewf.github.io/ai-augmented-agents/principles/result/keep-the-result-untouched.md): the result file stays as the worker wrote it, and the lead's verdict is written in another file that links it.
+- [Run the checks at the lead](https://tewf.github.io/ai-augmented-agents/principles/result/run-the-checks-at-the-lead.md): the lead runs the listed checks on every result before using it, at the centre, not delegated to the workers.
+
+## Optional
+
+- [Evidence](https://tewf.github.io/ai-augmented-agents/evidence/README.md): one literature review per topic, with the evidence against
+- [Bibliography](https://tewf.github.io/ai-augmented-agents/evidence/bibliography.md): every cited work, once
+- [Shapes](https://tewf.github.io/ai-augmented-agents/shapes/README.md): skeletons for kinds of documents
+- [Decisions](https://tewf.github.io/ai-augmented-agents/decisions/README.md): the choices this repository made, one record each

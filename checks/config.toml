@@ -28,6 +28,15 @@ family = ["reader-ergonomics",
           "reader-ergonomics-blueprint"]
 shared_links = []
 
+# The standard's card: the principle groups, in the order the card shows them (extending.md, Indexes).
+[standard_card]
+facets = ["brief", "result"]
+
+# Each shape links, or holds, a filled example of itself (the standard's shape-example check).
+[shape_example]
+files = ["shapes/exchange.md"]
+example_headings = ["Worked example"]
+
 # The result of an exchange is a worker's reply kept as it came (shapes/exchange.md, rule 6), so the prose checks leave
 # it alone; exchange-pairs reads it through the repository's file list. The first three are the standard's own.
 [scope]
