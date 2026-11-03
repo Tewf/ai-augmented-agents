@@ -221,3 +221,73 @@ path = "README.fr.md"
 question = "reads about equally as how-to and tutorial: one mode per document?"
 file = "fbd321442cfa"
 answer = "One mode: understanding why. The numbered steps of `L'adopter` are a short section of a front page, not a second mode."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "110 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "23a604135ca3"
+answer = "It stays: its one role is the French front page. `Ce que la revue a trouvé` is one of its sections, not a second role."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "108 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "2dffbbb5e25b"
+answer = "It stays: its one role is the front page of the repository. `What the review found` is one section of that role."
+
+[[answer]]
+check = "logical-lines"
+path = "evidence/multi-agent-teams/protocol.md"
+question = "116 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "3203a4c1e241"
+answer = "It stays: its one role is `Protocol: how the pool was built`. The forward search and the second rater are steps of that one procedure, numbered after it."
+
+[[answer]]
+check = "figures-present"
+path = "evidence/multi-agent-teams/review.md"
+question = "a long text with no figure, table or diagram: is a relation, set, quantity or process described only in words?"
+file = "5a02088151ca"
+answer = "Partly: each strand under `Existing reviews` is a list of one finding per line. Comparisons across strands are tables in the state of the art file. No figure is planned for this first pass."
+
+[[answer]]
+check = "document-mode"
+path = "README.fr.md"
+question = "reads about equally as how-to and tutorial: one mode per document?"
+file = "23a604135ca3"
+answer = "Reference: the front page is read for its findings, under `Ce que la revue a trouvé`, and for its file table. It holds no procedure, so it is not a how-to."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/README.md"
+question = "reads about equally as reference and how-to: one mode per document?"
+file = "ec99dcc4d292"
+answer = "Reference: it is read for its `Claims` table and its `Files` table. It holds no procedure."
+
+[[answer]]
+check = "document-mode"
+path = "evidence/multi-agent-teams/review.md"
+question = "reads about equally as how-to and explanation: one mode per document?"
+file = "5a02088151ca"
+answer = "Explanation: it states what each tradition measured, under `Existing reviews` and the lettered strands. The how-to match is only its grouping by question."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/position.md"
+question = "the name 'position' and the opening are far apart in meaning (0.05): does the name predict the content?"
+file = "a4fd058ae6d6"
+answer = "Yes, once the name is read as the review's step: the title `Position: what is known, what is not, and what this repository adds` says what the file holds."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/review.md"
+question = "the name 'review' and the opening are far apart in meaning (0.08): does the name predict the content?"
+file = "5a02088151ca"
+answer = "Yes: the title `Review: what each tradition has measured` says what the file holds, the strands of the review."
+
+[[answer]]
+check = "name-content"
+path = "evidence/multi-agent-teams/state-of-the-art.md"
+question = "the name 'state' and the opening are far apart in meaning (0.02): does the name predict the content?"
+file = "ca185fa943bc"
+answer = "Yes: the title `State of the art: the best evidence and the practice most adopted` names the file's content."
