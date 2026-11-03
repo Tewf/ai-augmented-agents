@@ -6,7 +6,7 @@ The review behind this repository, on several agents at work on one project, and
 
 | Part | Summary |
 |---|---|
-| [multi-agent-teams](multi-agent-teams/) | first pass, 35 sources: when delegating pays, what a brief holds, what a model agent optimises, and what can be counted |
+| [multi-agent-teams](multi-agent-teams/) | first pass and a forward search, 39 sources: when delegating pays, what a brief holds, what a model agent optimises, and what can be counted |
 | [bibliography](bibliography.md) | every work cited, once, with a stable link |
 
 ## See also

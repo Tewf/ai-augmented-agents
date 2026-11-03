@@ -16,7 +16,7 @@ Step 4 of the review. It keeps "nobody has done this" apart from "we have not do
 - No study prices briefing and checking against the saving of delegating.
 - No source asks what a model agent optimises in the economists' sense, and what follows for the game.
 - No source counts decisions taken twice or facts written twice across repositories built by several agents.
-- These are claims about this pass: one reviewer, 35 sources, no Scholar or SSRN search.
+- These are claims about this pass: one reviewer for the formal sources, 39 sources, a forward search from three seeds, no Scholar or SSRN search.
 
 ## Not done here
 

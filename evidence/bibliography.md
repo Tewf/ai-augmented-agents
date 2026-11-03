@@ -7,12 +7,14 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Anthropic 2024 | Anthropic (2024-12-19). Building effective agents. Engineering post. Read in full | https://www.anthropic.com/engineering/building-effective-agents |
 | Anthropic 2025 | Anthropic (2025-06-13). How we built our multi-agent research system. Engineering post, the owner's account of its own system. Read in full | https://www.anthropic.com/engineering/multi-agent-research-system |
 | Bernstein 2002 | Bernstein, Givan, Immerman, Zilberstein (2002). The complexity of decentralized control of Markov decision processes. Mathematics of Operations Research 27(4). Abstract read, in its conference version | https://doi.org/10.1287/moor.27.4.819.297 |
+| Brodeur 2026 | Brodeur, Valenta, Marcoci, Aparicio, Mikola, Barbarioli et al. (2026). AI-assisted teams outperform AI-led teams but not human-only teams in assessing research reproducibility in quantitative social science. PNAS. Abstract read | https://doi.org/10.1073/pnas.2524747123 |
 | Brooks 1975 | Brooks (1975). The mythical man-month: essays on software engineering. Addison-Wesley. Book, located only | https://openlibrary.org/isbn/9780201835953 |
 | Cemri 2025 | Cemri, Pan, Yang et al. (2025). Why do multi-agent LLM systems fail? Preprint. Read in full | arXiv:2503.13657 |
 | Chen 2023b | Chen, Zaharia, Zou (2023). FrugalGPT: how to use large language models while reducing cost and improving performance. Preprint. Read in full | arXiv:2305.05176 |
 | Cognition 2025 | Yan (2025-06-12). Don't build multi-agents. Cognition blog post, the owner's account of its own product. Read in full | https://cognition.com/blog/dont-build-multi-agents |
 | Conway 1968 | Conway (1968). How do committees invent? Datamation, April 1968. Reprint on the author's site, read | https://www.melconway.com/Home/Committees_Paper.html |
 | Dafoe 2020 | Dafoe, Hughes, Bachrach et al. (2020). Open problems in cooperative AI. Preprint. Abstract read | arXiv:2012.08630 |
+| Dell'Acqua 2026 | Dell'Acqua, McFowland, Mollick, Lifshitz-Assaf, Kellogg, Rajendran (2026). Navigating the jagged technological frontier: field experimental evidence of the effects of artificial intelligence on knowledge worker productivity and quality. Organization Science. Abstract read; the 2023 working paper not read | https://doi.org/10.1287/orsc.2025.21838 |
 | Du 2023 | Du, Li, Torralba, Tenenbaum, Mordatch (2023). Improving factuality and reasoning in language models through multiagent debate. Preprint. Abstract read | arXiv:2305.14325 |
 | Foerster 2018 | Foerster, Chen, Al-Shedivat et al. (2018). Learning with opponent-learning awareness. AAMAS 2018; preprint 2017. Abstract read | arXiv:1709.04326 |
 | Fudenberg 1986 | Fudenberg, Maskin (1986). The folk theorem in repeated games with discounting or with incomplete information. Econometrica 54(3). Located only | https://doi.org/10.2307/1911307 |
@@ -27,9 +29,11 @@ Every work this repository cites, once: Key, citation, and a stable link.
 | Jensen 1976 | Jensen, Meckling (1976). Theory of the firm: managerial behavior, agency costs and ownership structure. Journal of Financial Economics 3(4). Located only | https://doi.org/10.1016/0304-405X(76)90026-X |
 | Kapoor 2024 | Kapoor, Stroebl, Siegel et al. (2024). AI agents that matter. Preprint. Abstract read | arXiv:2407.01502 |
 | Kim 2025 | Kim, Gu, Park et al. (2025). Towards a science of scaling agent systems. Preprint. Read in full | arXiv:2512.08296 |
+| Lee 2026b | Lee, Yin, Jia, Wakslak (2026). Relying on AI at work reduces self-efficacy, ownership, and meaning while active collaboration mitigates the effects. Scientific Reports. Abstract read | https://doi.org/10.1038/s41598-026-42312-6 |
 | Leibo 2017 | Leibo, Zambaldi, Lanctot, Marecki, Graepel (2017). Multi-agent reinforcement learning in sequential social dilemmas. AAMAS 2017. Abstract read | arXiv:1702.03037 |
 | Marschak 1972 | Marschak, Radner (1972). Economic theory of teams. Cowles Foundation Monograph 22, Yale University Press. Scanned book, located only | https://cowles.yale.edu/sites/default/files/2022-09/m22-all.pdf |
 | Nisan 2001 | Nisan, Ronen (2001). Algorithmic mechanism design. Games and Economic Behavior 35. Located only | https://doi.org/10.1006/game.1999.0790 |
+| Ngo 2025 | Ngo (2025). Human–AI collaboration in high-stakes decisions: a meta-analysis of healthcare and public sectors. Applied Economics Letters. Abstract read | https://doi.org/10.1080/13504851.2025.2586160 |
 | Ong 2024 | Ong, Almahairi, Wu et al. (2024). RouteLLM: learning to route LLMs with preference data. Preprint. Read in part | arXiv:2406.18665 |
 | Pynadath 2002 | Pynadath, Tambe (2002). The communicative multiagent team decision problem: analyzing teamwork theories and models. Journal of Artificial Intelligence Research 16. Located only | https://doi.org/10.1613/jair.1024 |
 | Smit 2023 | Smit, Duckworth, Grinsztajn et al. (2023). Should we be going MAD? A look at multi-agent debate strategies for LLMs. Preprint. Abstract read | arXiv:2311.17371 |

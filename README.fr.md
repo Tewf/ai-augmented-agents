@@ -11,8 +11,8 @@ multi-agents.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03) :** version 0.1.0. Construit : la première passe de la revue de littérature (35 sources, un
-> relecteur, la référence nommée), deux exécutions sur le brief (210 appels), cinq principes et une forme,
+> **État (2026-11-03) :** version 0.1.0. Construit : la première passe de la revue de littérature (39 sources, un
+> relecteur pour les sources formelles, un second évaluateur pour les grises, la référence nommée), deux exécutions sur le brief (210 appels), cinq principes et une forme,
 > l'échange, chaque principe avec une vérification par programme, et les tests unitaires des vérifications et de
 > l'exécution. Ouvert : la référence est nommée mais pas encore comparée à un chef centralisé, les exécutions portent sur trois
 > tâches du même genre et deux niveaux de modèle, et les incitations et le décompte du travail en double n'ont pas de source. L'étape de
@@ -119,11 +119,11 @@ Une première passe est écrite dans [evidence](evidence/multi-agent-teams/READM
 
 ## Ce que la revue a trouvé
 
-La première passe : 35 sources, dont 3 grises. Le détail et les niveaux de preuve sont dans [la revue](evidence/multi-agent-teams/review.md), en anglais.
+La première passe, avec une recherche en aval : 39 sources, dont 3 grises. Le détail et les niveaux de preuve sont dans [la revue](evidence/multi-agent-teams/review.md), en anglais.
 
 - **Aucun domaine ne nomme le problème entier.** L'économie étudie les équipes de personnes (théorie des équipes, aléa moral dans les équipes), l'informatique étudie les programmes, et la pratique a ses propres mots ([frame](evidence/multi-agent-teams/frame.md)).
-- **Plusieurs agents ne battent pas un seul de façon fiable.** Sur 260 configurations, la variation va de +80,8 % à -70,0 %, selon la tâche (mesuré). Un contrôle central a ramené l'amplification des erreurs de 17,2 fois à 4,4 fois.
-- **Déléguer à un modèle moins cher paie, et se mesure comme un routage.** Une cascade a réduit le coût jusqu'à 98,3 % sur un jeu de données. Aucune source ne chiffre le temps de briefer et de vérifier.
+- **Plusieurs agents ne battent pas un seul de façon fiable.** Sur 260 configurations, la variation va de +80,8 % à -70,0 %, selon la tâche (mesuré). Un contrôle central a ramené l'amplification des erreurs de 17,2 fois à 4,4 fois. Chez les personnes, la même coupure apparaît : laisser le modèle diriger a fait tomber la reproduction à 37 %, contre 91 % quand il assiste (Brodeur 2026, secondaire).
+- **Déléguer à un modèle moins cher paie, et se mesure comme un routage.** Une cascade a réduit le coût jusqu'à 98,3 % sur un jeu de données. Aucune source ne chiffre le temps de briefer et de vérifier. Lee 2026b mesure un coût de la délégation que l'économie ne montre pas (secondaire).
 - **Le brief a une convention et aucun test.** Objectif, format de sortie, outils et limites sont conseillés par une entreprise à propos de son propre système ; aucune étude n'enlève un champ. Les exécutions suivent.
 - **Les incitations et les comptes restent ouverts.** Aucune source ne montre qu'un agent-modèle a une incitation, et aucune ne compte les décisions prises deux fois ou les faits écrits deux fois.
 

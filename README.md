@@ -10,8 +10,8 @@ many, with the tools of game theory, team theory and multi-agent reinforcement l
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03):** version 0.1.0. Built: the first pass of the literature review (35 sources, one reviewer, the
-> baseline named), two runs on the brief (210 calls), five principles and one shape, the exchange, each principle
+> **Status (2026-11-03):** version 0.1.0. Built: the first pass of the literature review (39 sources, one reviewer for the
+> formal sources, a second rater for the grey ones, the baseline named), two runs on the brief (210 calls), five principles and one shape, the exchange, each principle
 > with a program check, and the unit tests of the checks and of the run. Open: the baseline is named but not yet
 > compared with a central lead, the runs cover three tasks of one kind and two model tiers, and incentives and counts of duplicated work
 > have no source. The frame step found that the field's word for the problem is **team**, not agent; the name stays. It
@@ -116,11 +116,11 @@ A first pass is written in [evidence](evidence/multi-agent-teams/README.md). It 
 
 ## What the review found
 
-The first pass: 35 sources, 3 of them grey. Details and grades are in [the review](evidence/multi-agent-teams/review.md).
+The first pass, with a forward search: 39 sources, 3 of them grey. Details and grades are in [the review](evidence/multi-agent-teams/review.md).
 
 - **No field names the whole problem.** Economics studies teams of people (team theory, moral hazard in teams), computer science studies programs, and practice has its own words ([frame](evidence/multi-agent-teams/frame.md)).
-- **Many agents do not reliably beat one.** Over 260 configurations the change ran from +80.8% to -70.0%, set by the task (measured). A central check cut error amplification from 17.2 times to 4.4 times.
-- **Delegating to a cheaper model pays, and is measured as routing.** A cascade cut cost by up to 98.3% on one dataset. No source prices briefing and checking.
+- **Many agents do not reliably beat one, and people with AI show the same split.** Over 260 configurations the change ran from +80.8% to -70.0%, set by the task (measured). A central check cut error amplification from 17.2 times to 4.4 times. With the model left to lead, reproduction fell to 37%, against 91% with the model assisting (Brodeur 2026, secondary).
+- **Delegating to a cheaper model pays, and is measured as routing.** A cascade cut cost by up to 98.3% on one dataset. No source prices briefing and checking. Lee 2026b measures a cost of delegation that the saving does not show (secondary).
 - **The brief has a convention and no test.** Objective, output format, tools and boundaries are advised by one company about its own system; no study removes one field. The runs are below.
 - **Incentives and counts are open.** No source shows a model agent has an incentive, and none counts decisions taken twice or facts written twice.
 

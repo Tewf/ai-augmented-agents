@@ -8,7 +8,7 @@ Step 3 of the review. For each question, the **best evidence** (a research recor
 |---|---|---|---|
 | Best evidence, achieved | Chen 2023b | a cascade of models matched the best one at up to 98.3% lower cost on one dataset | measured |
 | Best evidence, achieved | Ong 2024 | routing between a strong and a weak model cut cost over 2 times in certain cases | measured |
-| Best evidence, people | Vaccaro 2024 | people with AI did worse than the better of the two, g = -0.23 (secondary) | measured |
+| Best evidence, people | Vaccaro 2024; Ngo 2025 | people with AI did worse than the better of the two, g = -0.23; augmentation helped (g = 0.62) and synergy did not (g = -0.38), secondary | measured |
 | Practice most adopted | orchestrator and workers (Anthropic 2024; Anthropic 2025) | a lead model splits the task and hands parts to others | convention |
 | Lower bound | none found | no source proves a floor on briefing and checking cost | |
 

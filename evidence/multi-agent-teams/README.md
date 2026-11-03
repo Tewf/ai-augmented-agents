@@ -2,10 +2,11 @@
 
 The first pass of the review behind this repository. It asks when handing a step to a cheaper agent pays, what a brief must hold, what a model agent optimises, and what can be counted from the history of several agents at work.
 
-- It holds 35 sources: 32 formal or classic, 3 grey.
+- It holds 39 sources: 36 formal or classic, 3 grey.
 - Grey: 3 tier 3 company posts, all at or above the threshold of 10 of 20, all their owners' claims.
-- Formal: 10 measured, 2 supported with caveat, 19 convention, argument or review, and the method source (Garousi 2019) not graded; 8 located only and not read.
-- 18 sources were read in the abstract only; their numbers are marked secondary.
+- Formal: 14 measured, 2 supported with caveat, 19 convention, argument or review, and the method source (Garousi 2019) not graded; 8 located only and not read.
+- 22 sources were read in the abstract only; their numbers are marked secondary.
+- A forward search from Vaccaro 2024, Cemri 2025 and Kim 2025 added four works; a second rater re-scored the three grey sources.
 
 ## Files
 
@@ -30,7 +31,8 @@ The first pass of the review behind this repository. It asks when handing a step
 | A central check cut error amplification from 17.2 times to 4.4 times | measured | review.md C |
 | Failures of multi-agent language-model systems cluster in 14 modes in three groups | measured, descriptive | review.md C |
 | Cascades and routers cut cost, up to 98.3% on one dataset, over 2 times in certain cases, on three public benchmarks | measured | review.md D |
-| People with AI did worse than the better of the two, on average (secondary) | measured | review.md D |
+| People with AI did worse than the better of the two, on average; augmentation helped and synergy did not (secondary) | measured | review.md D |
+| With the model left to lead, reproduction fell to 37%, against 91% with the model assisting (secondary) | measured | review.md D |
 | A brief should hold an objective, an output format, tools and boundaries | convention, owner's claim | review.md E |
 | Moral hazard in teams rests on unobserved effort; no source shows a model agent has such an incentive | convention; open | review.md A |
 | Nothing found counts decisions taken twice or facts written twice across agents' repositories | not found in this pass | position.md |
@@ -41,4 +43,4 @@ The first pass of the review behind this repository. It asks when handing a step
 
 ## Status
 
-A first pass. 35 sources, one reviewer. Eight sources are located and not read, and Scholar and SSRN were not searched. The frame found that the field's word for the problem is team, not agent; the repository keeps its name.
+A first pass, with a forward search. 39 sources, one reviewer for the formal sources and a second rater for the grey ones. Eight sources are located and not read, and Scholar and SSRN were not searched. The frame found that the field's word for the problem is team, not agent; the repository keeps its name.

@@ -1,6 +1,6 @@
 # Protocol: how the pool was built
 
-A first pass, run on 2026-11-02 by one reviewer. Terms are in [frame](frame.md); the pool is in [sources](sources.md).
+A first pass, run on 2026-11-02 by one reviewer, and extended on 2026-11-03 with a forward search (section 11). Terms are in [frame](frame.md); the pool is in [sources](sources.md).
 The method is the multivocal review of Garousi 2019.
 
 ## 1. Why grey literature
@@ -62,7 +62,7 @@ Counts are from OpenAlex, title and abstract field, on 2026-11-02, with no key a
 
 ## 6. Stopping rule
 
-Effort bounded with saturation. Each search string stopped after 5 consecutive results that added no concept; the grey search stopped at 3 sources because the pool was already at 35.
+Effort bounded with saturation. Each search string stopped after 5 consecutive results that added no concept; the grey search stopped at 3 sources because the pool was already at 35. The forward search added four works, under the cap of five set for it.
 
 ## 7. Selection
 
@@ -83,4 +83,32 @@ Per source: the claim, the number, where it was read. Synthesis is narrative by 
 - Not searched: Google Scholar, Scopus, Web of Science, SSRN, and forums. The human-AI teaming literature outside Vaccaro 2024 is largely unread.
 - Not read: the full text of the two economics classics and the book on teams; they are paywalled or scanned.
 - One reviewer, no inter-rater check. A number read only in an abstract is marked "(secondary)".
+- The forward search covers only the three seeds named in section 11, and only the most cited of Vaccaro 2024's citing works.
 - No identity was sent to any service.
+
+## 11. Forward search, added 2026-11-03
+
+Seeds: the three works cited most in the review, by count of keys in [review](review.md). Kim 2025 has four. Vaccaro 2024 and Cemri 2025 have two each, as do Hammond 2025 and Anthropic 2025.
+
+The tie was cut toward formal works that the review grades as measured. Hammond 2025, a report graded convention, and Anthropic 2025, a blog that no index holds, were left out.
+
+Database: OpenAlex, citing lists by work identifier, on 2026-11-03. The client identified itself with a project name and no contact, sent no account, and spaced requests half a second apart.
+
+| Seed | Filter | Listed | Screened |
+|---|---|---|---|
+| Kim 2025 | cites, the work's identifier | 1 | 1 |
+| Cemri 2025 | cites, the work's identifier | 21 | 21 |
+| Vaccaro 2024 | cites, the work's identifier | 597 (of 604 citations counted by the database) | top 200 by citation count |
+| Vaccaro 2024, subset | title and abstract match "agent" | 88 | 88 |
+| Vaccaro 2024, subset | title and abstract match "language model" or "LLM" | 101 | 101 |
+| Vaccaro 2024, subset | title and abstract match "delegation", "teams" or "collaboration" | 226 | top 200 |
+
+- Unique citing works screened by title: 406. Abstracts read: 11. Added: 4.
+- Not paged: the rest of Vaccaro 2024's list below the top 200 without a keyword match. Not screened: works citing Hammond 2025 or Anthropic 2025.
+- Set aside: a system paper for software engineering (Kim 2025's citer), a multi-agent annotation system, a failure-attribution method, and a fault-detection benchmark that runs on mock language models by a single author. Each is a single application or a method, not a finding about teams.
+- Added, because each changes or sharpens a finding in [review](review.md):
+  - Dell'Acqua 2026 (field experiment, 758 workers): the task decides the gain for people too. Review D, C.
+  - Brodeur 2026 (randomised, 288 researchers in 103 teams): leaving the model to lead lost most of the result. Review D.
+  - Ngo 2025 (meta-analysis, 146 experiments): augmentation helped and synergy did not. Review D.
+  - Lee 2026b (pre-registered experiment, N = 269, and a survey, N = 270): a cost of delegation the saving does not show. Review D.
+- Every number from these four is read in the abstract and marked "(secondary)".

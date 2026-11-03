@@ -1,6 +1,6 @@
 # Sources: the pool, its flow and its quality
 
-The pool of the review, read on 2026-11-02: 35 sources, 32 formal or classic and 3 grey. Searches are in [protocol](protocol.md); keys are in the [bibliography](../bibliography.md).
+The pool of the review, read on 2026-11-02 and extended on 2026-11-03: 39 sources, 36 formal or classic and 3 grey. Searches are in [protocol](protocol.md); keys are in the [bibliography](../bibliography.md).
 
 ## Flow
 
@@ -8,14 +8,14 @@ The pool of the review, read on 2026-11-02: 35 sources, 32 formal or classic and
 |---|---|
 | Formal strings run | 11 counted, 1 timed out; 2 arXiv strings, 1 failed |
 | Grey strings run | 1 web string (7 results, none opened) |
-| Records screened by title and abstract | about 40 |
+| Records screened by title and abstract | about 40 in the first pass; 406 citing titles in the forward search |
 | Opened and read in full | 7 (Cemri 2025, Kim 2025, Chen 2023b, Conway 1968, Anthropic 2024, Anthropic 2025, Cognition 2025) |
 | Read in part | 1 (Ong 2024) |
-| Abstract read only | 18 |
+| Abstract read only | 22 (18 in the first pass; the 4 forward works) |
 | Method source, not part of the evidence | 1 (Garousi 2019) |
 | Located only, not read | 8 (the two economics classics and the book on teams among them) |
 | Set aside as one-application systems | 4 |
-| Included | 35 |
+| Included | 39 (35 in the first pass; 4 from the forward search) |
 | Grey below 10 of 20 | 0 |
 
 ## Grey sources, scored on Garousi 2019
@@ -56,6 +56,7 @@ Grade for formal sources: **measured** (M), **supported with caveat** (S), **con
 | Smit 2023 | formal, benchmark | string "debate" | M; abstract | review C, against |
 | Cemri 2025 | formal, dataset | string "failure taxonomy" | M, descriptive; read in full | review C |
 | Kim 2025 | formal, experiments | arXiv string | M; read in full | review C |
+| Lee 2026b | formal, experiments | forward from Vaccaro 2024 | M, on a pre-registered experiment; abstract (secondary) | review D, E |
 | Hammond 2025 | formal, report | arXiv string | C; abstract | review B, C |
 | Tomasev 2025 | formal, argument | string "mechanism design" | C; abstract | review A |
 | Tomasev 2026 | formal, framework | string "intelligent AI delegation" | C; abstract | review D |
@@ -63,6 +64,9 @@ Grade for formal sources: **measured** (M), **supported with caveat** (S), **con
 | Chen 2023b | formal, experiments | snowball from Ong 2024 | M; read in full | review D |
 | Ong 2024 | formal, experiments | string "routing" | M; read in part | review D |
 | Vaccaro 2024 | formal, meta-analysis | string "human-AI teaming" | M; abstract | review D |
+| Ngo 2025 | formal, meta-analysis | forward from Vaccaro 2024 | M; abstract (secondary) | review D |
+| Brodeur 2026 | formal, experiment | forward from Vaccaro 2024 | M, randomised; abstract (secondary) | review D |
+| Dell'Acqua 2026 | formal, field experiment | forward from Vaccaro 2024 | M, pre-registered; abstract (secondary) | review C, D |
 | Garousi 2019 | formal, method | method | S; not graded | protocol |
 | Conway 1968 | classic, magazine paper | practice | C; read | review E |
 | Brooks 1975 | classic, book | practice | C; located only | review E |

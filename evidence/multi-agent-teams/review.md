@@ -1,6 +1,6 @@
 # Review: what each tradition has measured
 
-Step 2 of the review. It groups the 35 sources by strand and answers Q1 to Q4 of [frame](frame.md).
+Step 2 of the review. It groups the 39 sources by strand and answers Q1 to Q4 of [frame](frame.md).
 
 Grades: measured, supported with caveat, convention, not supported. A number read only in an abstract is marked (secondary). Keys are in the [bibliography](../bibliography.md).
 
@@ -33,6 +33,7 @@ Grades: measured, supported with caveat, convention, not supported. A number rea
 ## C. Systems of language-model agents (Q1, Q2)
 
 - **Task decides the gain**: across 260 configurations, six benchmarks, five architectures and three model families, the change against one agent ranges from +80.8% to -70.0% (Kim 2025, Table and abstract, read). Grade: measured.
+- The same holds for people: AI raised output on knowledge tasks inside its frontier and lowered the rate of correct answers on a task outside it (Dell'Acqua 2026, secondary). Grade: measured, pre-registered field experiment.
 - **Centralised checking contains errors**: errors grow 17.2 times without it and 4.4 times with it (Kim 2025, read). Grade: measured.
 - **The predictive model is weak**: cross-validated R squared 0.373 across the six benchmarks, 0.413 with a task-grounded metric (Kim 2025, read). It explains a little over a third.
 - **Failures are mostly about the team**: 14 failure modes in three groups, from 1,600+ traces over 7 frameworks (Cemri 2025, read).
@@ -48,8 +49,11 @@ Grades: measured, supported with caveat, convention, not supported. A number rea
 - **Routers** cut cost by over 2 times in certain cases, without sacrificing response quality, on three public benchmarks (Ong 2024, read in part). Grade: measured.
 - **Humans with AI**: a meta-analysis of 106 studies and 370 effect sizes (Vaccaro 2024, secondary).
 - The combination did worse than the better of the two, Hedges g = -0.23 (95% CI -0.39 to -0.07; secondary).
+- Ngo 2025 splits that average. Across 146 experiments in healthcare and public sectors, AI augmentation improved performance (g = 0.622), while synergy, the team, was generally negative (g = -0.380), with AI alone often better (secondary). Publication bias favours augmentation. Grade: measured, with that caveat.
+- Brodeur 2026 gives the same split in a randomised experiment: 288 researchers in 103 teams. Reproduction ran at 94% for human-only teams and 91% for AI-assisted teams. It fell to 37% where the model led with minimal oversight (secondary). Grade: measured.
 - Decision tasks lost and content creation gained. Grade: measured.
 - **A framework**: delegation includes transfer of authority, responsibility, roles and trust (Tomasev 2026, secondary). Grade: convention, proposed.
+- Lee 2026b measures a cost of delegation that the saving does not show. In a pre-registered experiment (N = 269), copying the model's text lowered self-efficacy, ownership and meaning, and drafting first and then refining mitigated those effects (secondary). Grade: measured, on one writing task.
 - No source puts a price on briefing and checking beside the saving.
 
 ## E. Practice (Q1, Q2)
