@@ -3,6 +3,21 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [0.1.0] - 2026-11-03
+
+First release. What it holds:
+
+### Added
+
+- A first literature review of 35 sources on several agents working one project, with its frame, protocol, sources,
+  review, case against, state of the art, position and baseline B1, and the shared bibliography.
+- One run of the brief test: 30 calls, three arms, judged by unit tests, with its protocol, code and results.
+- A card of five principles in two groups, each with its grade and a check, and the exchange shape with a worked example.
+- Four checks for the task and result files of an exchange, and 23 unit tests of them; 18 unit tests of the brief run.
+- Four decision records, the checks workflow (unit tests, then the standard's checks, with a weekly syntax and
+  reference job) and the site workflow.
+- Pinned reader-ergonomics v1.19.2 (`b9732b9`), the same in both workflows.
+
 ## 2026-11-02
 
 ### Added

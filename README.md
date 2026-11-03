@@ -10,12 +10,36 @@ many, with the tools of game theory, team theory and multi-agent reinforcement l
 
 This page in French: [README.fr.md](README.fr.md).
 
-> **Status (2026-11-03):** the first pass of the literature review is written: 35 sources, one reviewer, the baseline
-> named. One small run on the brief has been made (30 calls). Five principles and one shape, the exchange, are written, each with a program check. The frame step found
-> that the field's word for the problem is **team**, not agent; the name stays. It is not an official standard, not a peer-reviewed study and not a new result.
+> **Status (2026-11-03):** version 0.1.0. Built: the first pass of the literature review (35 sources, one reviewer, the
+> baseline named), one small run on the brief (30 calls), five principles and one shape, the exchange, each principle
+> with a program check, and the unit tests of the checks and of the run. Open: the baseline is named but not yet
+> compared with a central lead, the run covers one task and one model, and incentives and counts of duplicated work
+> have no source. The frame step found that the field's word for the problem is **team**, not agent; the name stays. It
+> is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
 > reader-ergonomics was made. Corrections are welcome as issues.
+
+## Take it
+
+Ten minutes, without reading the review. The general form is reader-ergonomics'
+[Take your own version](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version); here it is for handing work between agents.
+
+1. **Pin the standard by commit**, so its checks do not change under you:
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+2. **Copy what you need, once:** the [exchange shape](shapes/exchange.md) with its worked [example](shapes/examples/README.md),
+   and the four checks in [checks/local/](checks/local/) (`task_headings.py`, `task_decided.py`, `task_checks.py`,
+   `exchange_pairs.py`, with the helper `_exchange.py`) into your repository's `checks/local/`. Name each pair
+   `NN-slug.task.md` and `NN-slug.result.md`. The copies are yours; note the commit you copied from.
+3. **Configure** with a `checks/config.toml`:
+
+   ```toml
+   extends = "reader-ergonomics"
+   ```
+
+4. **Run the checks** from the folder of your repository: `python3 reader-ergonomics/checks/run.py .`
+5. **Disagree** by opening an issue on this repository, with the evidence. A rule of the standard itself goes to
+   reader-ergonomics' issues; a preference of your own reader goes in a reader style as an override.
 
 ## Where it sits
 
@@ -134,11 +158,11 @@ The one shape is the [exchange](shapes/exchange.md): a task file, a result file 
 ## Check it
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
 python3 reader-ergonomics/checks/run.py path/to/this/repository
 ```
 
-CI runs the same checks on every push, and a run fails on any error
+CI first runs the unit tests of the checks and of the brief run, then the same checks, on every push, and a run fails on any error
 ([checks.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/checks.yml)). Every push to
 master also renders the site, [tewf.github.io/ai-augmented-agents](https://tewf.github.io/ai-augmented-agents/)
 ([pages.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/pages.yml)).

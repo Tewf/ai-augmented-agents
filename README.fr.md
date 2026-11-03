@@ -11,13 +11,38 @@ multi-agents.
 
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
-> **État (2026-11-03) :** la première passe de la revue de littérature est écrite : 35 sources, un relecteur, la
-> référence nommée. Une petite exécution sur le brief a été faite (30 appels) ; cinq principes et une forme, l'échange, sont écrits, chacun avec une vérification par programme. L'étape de cadrage a trouvé que le mot du domaine pour ce
-> problème est **équipe**, non agent ; le nom reste. Ce n'est ni une norme officielle, ni une étude relue par des
-> pairs, ni un résultat nouveau.
+> **État (2026-11-03) :** version 0.1.0. Construit : la première passe de la revue de littérature (35 sources, un
+> relecteur, la référence nommée), une petite exécution sur le brief (30 appels), cinq principes et une forme,
+> l'échange, chaque principe avec une vérification par programme, et les tests unitaires des vérifications et de
+> l'exécution. Ouvert : la référence est nommée mais pas encore comparée à un chef centralisé, l'exécution porte sur une
+> seule tâche et un seul modèle, et les incitations et le décompte du travail en double n'ont pas de source. L'étape de
+> cadrage a trouvé que le mot du domaine pour ce problème est **équipe**, non agent ; le nom reste. Ce n'est ni une
+> norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
 > **Comment il est fait :** avec Claude, un assistant IA d'Anthropic, sous la direction du mainteneur, comme
 > reader-ergonomics. Les corrections sont bienvenues sous forme d'issues.
+
+## L'adopter
+
+Dix minutes, sans lire la revue. La forme générale est la section « Take your own version » de
+[reader-ergonomics](https://github.com/Tewf/reader-ergonomics/blob/b9732b9814c71768f722691f3c5049ec2b8ed378/README.md#take-your-own-version) ; la voici pour la remise de travail entre agents.
+
+1. **Épingler la norme par son commit**, pour que ses vérifications ne changent pas sous vos pieds :
+   `git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9` (v1.19.2).
+2. **Copier ce dont vous avez besoin, une fois :** la [forme échange](shapes/exchange.md) avec son
+   [exemple](shapes/examples/README.md), et les quatre vérifications de [checks/local/](checks/local/)
+   (`task_headings.py`, `task_decided.py`, `task_checks.py`, `exchange_pairs.py`, avec l'aide `_exchange.py`) dans le
+   `checks/local/` de votre dépôt. Nommez chaque paire `NN-slug.task.md` et `NN-slug.result.md`. Les copies sont à
+   vous ; notez le commit d'où vous les avez prises.
+3. **Configurer** avec un `checks/config.toml` :
+
+   ```toml
+   extends = "reader-ergonomics"
+   ```
+
+4. **Lancer les vérifications** depuis le dossier de votre dépôt : `python3 reader-ergonomics/checks/run.py .`
+5. **Désaccord :** ouvrez une issue sur ce dépôt, avec la preuve. Une règle de la norme elle-même va aux issues de
+   reader-ergonomics ; une préférence de votre lecteur va dans un style de lecteur, comme dérogation.
 
 ## Où il se place
 
@@ -136,11 +161,11 @@ L'unique forme est l'[échange](shapes/exchange.md) : un fichier de tâche, un f
 ## Vérifier
 
 ```sh
-git clone https://github.com/Tewf/reader-ergonomics
+git clone https://github.com/Tewf/reader-ergonomics && git -C reader-ergonomics checkout b9732b9
 python3 reader-ergonomics/checks/run.py chemin/vers/ce/depot
 ```
 
-La CI exécute les mêmes vérifications à chaque push, et une exécution échoue à la première erreur
+La CI exécute d'abord les tests unitaires des vérifications et de l'exécution du brief, puis les mêmes vérifications, à chaque push, et une exécution échoue à la première erreur
 ([checks.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/checks.yml)). Chaque push sur
 master construit aussi le site, [tewf.github.io/ai-augmented-agents](https://tewf.github.io/ai-augmented-agents/)
 ([pages.yml](https://github.com/Tewf/ai-augmented-agents/blob/master/.github/workflows/pages.yml)).

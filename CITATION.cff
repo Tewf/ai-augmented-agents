@@ -10,6 +10,8 @@ abstract: >-
 type: software
 authors:
   - name: "Tewf"
+version: 0.1.0
+date-released: 2026-11-03
 repository-code: "https://github.com/Tewf/ai-augmented-agents"
 license:
   - Apache-2.0
