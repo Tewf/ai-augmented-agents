@@ -15,7 +15,7 @@ Grades mean what they mean in [reader-ergonomics](https://github.com/Tewf/reader
 | Principle | Claim | Grade |
 |---|---|---|
 | [Escalate on a failed check](principles/brief/escalate-on-a-failed-check.md) | a task file says what happens when its check fails, by default a stronger worker or the lead, never an unchecked retry. | measured for cascades that try a cheaper model first and stop when a scorer accepts, on three datasets and three public benchmarks; convention for writing the rule into the task file |
-| [List the checks](principles/brief/list-the-checks.md) | a task file lists the checks that will judge the result, as commands, under four headings in a fixed order: Task, Decided, To find and Checks. | convention for the four parts: one company advises them about its own system, with no ablation. Supported with caveat for listing the checks, from one run of one task and one small model |
+| [List the checks](principles/brief/list-the-checks.md) | a task file lists the checks that will judge the result, as commands, under four headings in a fixed order: Task, Decided, To find and Checks. | convention for the four parts: one company advises them about its own system, with no ablation. Listing the checks as the lead's acceptance rule is a convention. As a way to raise a worker's pass rate on cases the brief never named, not supported: 29 of 60 hidden passes against 30 of 60 without the list, over three tasks and two tiers |
 | [Say why it is handed over](principles/brief/say-why-handed-over.md) | a task file says why this work leaves the lead, with the lead doing it alone as the default. | measured for the size and the sign of the gain depending on the task; convention for writing the reason into the task file |
 
 ### Result: what comes back
