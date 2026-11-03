@@ -12,10 +12,10 @@ multi-agents.
 Cette page en anglais : [README.md](README.md). Les deux versions suivent le même état.
 
 > **État (2026-11-03) :** version 0.1.0. Construit : la première passe de la revue de littérature (35 sources, un
-> relecteur, la référence nommée), une petite exécution sur le brief (30 appels), cinq principes et une forme,
+> relecteur, la référence nommée), deux exécutions sur le brief (210 appels), cinq principes et une forme,
 > l'échange, chaque principe avec une vérification par programme, et les tests unitaires des vérifications et de
-> l'exécution. Ouvert : la référence est nommée mais pas encore comparée à un chef centralisé, l'exécution porte sur une
-> seule tâche et un seul modèle, et les incitations et le décompte du travail en double n'ont pas de source. L'étape de
+> l'exécution. Ouvert : la référence est nommée mais pas encore comparée à un chef centralisé, les exécutions portent sur trois
+> tâches du même genre et deux niveaux de modèle, et les incitations et le décompte du travail en double n'ont pas de source. L'étape de
 > cadrage a trouvé que le mot du domaine pour ce problème est **équipe**, non agent ; le nom reste. Ce n'est ni une
 > norme officielle, ni une étude relue par des pairs, ni un résultat nouveau.
 >
@@ -124,10 +124,10 @@ La première passe : 35 sources, dont 3 grises. Le détail et les niveaux de pre
 - **Aucun domaine ne nomme le problème entier.** L'économie étudie les équipes de personnes (théorie des équipes, aléa moral dans les équipes), l'informatique étudie les programmes, et la pratique a ses propres mots ([frame](evidence/multi-agent-teams/frame.md)).
 - **Plusieurs agents ne battent pas un seul de façon fiable.** Sur 260 configurations, la variation va de +80,8 % à -70,0 %, selon la tâche (mesuré). Un contrôle central a ramené l'amplification des erreurs de 17,2 fois à 4,4 fois.
 - **Déléguer à un modèle moins cher paie, et se mesure comme un routage.** Une cascade a réduit le coût jusqu'à 98,3 % sur un jeu de données. Aucune source ne chiffre le temps de briefer et de vérifier.
-- **Le brief a une convention et aucun test.** Objectif, format de sortie, outils et limites sont conseillés par une entreprise à propos de son propre système ; aucune étude n'enlève un champ. Une première exécution suit.
+- **Le brief a une convention et aucun test.** Objectif, format de sortie, outils et limites sont conseillés par une entreprise à propos de son propre système ; aucune étude n'enlève un champ. Les exécutions suivent.
 - **Les incitations et les comptes restent ouverts.** Aucune source ne montre qu'un agent-modèle a une incitation, et aucune ne compte les décisions prises deux fois ou les faits écrits deux fois.
 
-## La première exécution : le brief
+## Les exécutions : le brief
 
 Une tâche à réponse vérifiable, donnée à un petit modèle hébergé en trois bras, dix essais chacun, jugés par des tests unitaires ([protocole](experiments/brief-test/protocol.md), [résultats](experiments/brief-test/results.md), [décision 0003](decisions/0003-the-brief-is-tested-on-one-small-task.md), en anglais).
 
@@ -137,8 +137,18 @@ Une tâche à réponse vérifiable, donnée à un petit modèle hébergé en tro
 | brief de la convention | 0 | 0 |
 | convention plus les vérifications | 5 | 0 |
 
-- La convention seule n'a pas aidé sur cette tâche ; lister les vérifications, si.
-- Elle ne dit pas plus : une tâche, un modèle, dix essais, et le dernier bras voit les cas qui le jugent.
+- Première série : la convention seule n'a pas aidé sur cette tâche ; lister les vérifications, si, sur les cas listés.
+
+Deuxième série : trois tâches, deux niveaux (un petit modèle hébergé et claude-haiku-5-5), 180 appels, jugés par des cas cachés qu'aucun bras ne voit ([protocole](experiments/brief-test/protocol-2.md), [résultats](experiments/brief-test/results-2.md), [décision 0005](decisions/0005-listing-the-checks-is-not-a-gain-on-unseen-cases.md), en anglais).
+
+| Bras | Cas cachés réussis sur 60 | Cas montrés réussis sur 60 |
+|---|---|---|
+| sans brief | 0 | 0 |
+| brief de la convention | 30 | 38 |
+| convention plus les vérifications | 29 | 42 |
+
+- Les lignes « Décidé » portent l'effet : de 0 à 30 sur 60. La liste des vérifications n'apporte rien sur des cas non vus ; ce principe perd donc sa revendication sur le taux de réussite.
+- Elle ne dit pas plus : trois tâches du même genre, un modèle par niveau, et les bras diffèrent par plus que l'information.
 
 ## La norme
 

@@ -186,3 +186,38 @@ path = "README.fr.md"
 question = "reads about equally as how-to and tutorial: one mode per document?"
 file = "e6a1fe157ea5"
 answer = "One mode: understanding why. The numbered steps of `L'adopter` are a short section of a front page, not a second mode."
+
+[[answer]]
+check = "logical-lines"
+path = "README.fr.md"
+question = "110 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "fbd321442cfa"
+answer = "Il peut rester : son rôle est la page d'accueil, une phrase, `État`, `L'adopter` et la carte des parties, sans partie en double."
+
+[[answer]]
+check = "logical-lines"
+path = "README.md"
+question = "108 logical lines, past the trigger of 80. State this file's role in one sentence. If the sentence needs 'and', split the file; if not, it may stay."
+file = "0a1511e22692"
+answer = "It may stay: its role is the front page, one sentence, `Status`, `Take it` and the map of the parts, with no part held twice."
+
+[[answer]]
+check = "co-change"
+path = "README.fr.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "fbd321442cfa"
+answer = "They stay apart and already link: the front page lists `decisions` in its `Contenu` table, and the folder README lists each record, so each new record touches both."
+
+[[answer]]
+check = "co-change"
+path = "README.md"
+question = "changed together with decisions/README.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "0a1511e22692"
+answer = "They stay apart and already link: the front page lists `decisions` in its `Contents` table, and the folder README lists each record, so each new record touches both."
+
+[[answer]]
+check = "document-mode"
+path = "README.fr.md"
+question = "reads about equally as how-to and tutorial: one mode per document?"
+file = "fbd321442cfa"
+answer = "One mode: understanding why. The numbered steps of `L'adopter` are a short section of a front page, not a second mode."

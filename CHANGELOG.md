@@ -3,6 +3,17 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [Unreleased]
+
+### Added
+
+- Round two of the brief test: 180 calls, three tasks, two model tiers, judged by hidden cases, with its protocol,
+  code, tests and results, and decision 0005.
+
+### Changed
+
+- The grade of the list-the-checks principle: no gain found on unseen cases.
+
 ## [0.1.0] - 2026-11-03
 
 First release. What it holds:

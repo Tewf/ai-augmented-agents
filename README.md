@@ -11,9 +11,9 @@ many, with the tools of game theory, team theory and multi-agent reinforcement l
 This page in French: [README.fr.md](README.fr.md).
 
 > **Status (2026-11-03):** version 0.1.0. Built: the first pass of the literature review (35 sources, one reviewer, the
-> baseline named), one small run on the brief (30 calls), five principles and one shape, the exchange, each principle
+> baseline named), two runs on the brief (210 calls), five principles and one shape, the exchange, each principle
 > with a program check, and the unit tests of the checks and of the run. Open: the baseline is named but not yet
-> compared with a central lead, the run covers one task and one model, and incentives and counts of duplicated work
+> compared with a central lead, the runs cover three tasks of one kind and two model tiers, and incentives and counts of duplicated work
 > have no source. The frame step found that the field's word for the problem is **team**, not agent; the name stays. It
 > is not an official standard, not a peer-reviewed study and not a new result.
 >
@@ -121,10 +121,10 @@ The first pass: 35 sources, 3 of them grey. Details and grades are in [the revie
 - **No field names the whole problem.** Economics studies teams of people (team theory, moral hazard in teams), computer science studies programs, and practice has its own words ([frame](evidence/multi-agent-teams/frame.md)).
 - **Many agents do not reliably beat one.** Over 260 configurations the change ran from +80.8% to -70.0%, set by the task (measured). A central check cut error amplification from 17.2 times to 4.4 times.
 - **Delegating to a cheaper model pays, and is measured as routing.** A cascade cut cost by up to 98.3% on one dataset. No source prices briefing and checking.
-- **The brief has a convention and no test.** Objective, output format, tools and boundaries are advised by one company about its own system; no study removes one field. A first run is below.
+- **The brief has a convention and no test.** Objective, output format, tools and boundaries are advised by one company about its own system; no study removes one field. The runs are below.
 - **Incentives and counts are open.** No source shows a model agent has an incentive, and none counts decisions taken twice or facts written twice.
 
-## The first run: the brief
+## The runs: the brief
 
 One task with a checkable answer, given to a small hosted model in three arms, ten runs each, judged by unit tests ([protocol](experiments/brief-test/protocol.md), [results](experiments/brief-test/results.md), [decision 0003](decisions/0003-the-brief-is-tested-on-one-small-task.md)).
 
@@ -134,8 +134,18 @@ One task with a checkable answer, given to a small hosted model in three arms, t
 | convention brief | 0 | 0 |
 | convention plus the checks | 5 | 0 |
 
-- The convention alone did not help on this task; listing the checks did.
-- It cannot say more: one task, one model, ten runs, and the last arm is shown the cases it is judged by.
+- Round one: the convention alone did not help on this task; listing the checks did, on the cases it listed.
+
+Round two: three tasks, two tiers (a small hosted model and claude-haiku-5-5), 180 calls, judged by hidden cases no arm saw ([protocol](experiments/brief-test/protocol-2.md), [results](experiments/brief-test/results-2.md), [decision 0005](decisions/0005-listing-the-checks-is-not-a-gain-on-unseen-cases.md)).
+
+| Arm | Hidden pass of 60 | Shown cases passed of 60 |
+|---|---|---|
+| no brief | 0 | 0 |
+| convention brief | 30 | 38 |
+| convention plus the checks | 29 | 42 |
+
+- The Decided lines carry the effect: 0 to 30 of 60. The list of checks adds nothing on unseen cases, so that principle loses its pass-rate claim.
+- It cannot say more: three tasks of one kind, one model per tier, and the arms differ in more than information.
 
 ## The standard
 
