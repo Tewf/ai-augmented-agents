@@ -2,6 +2,8 @@
 
 Step 5 follow-up of the [review](../../evidence/multi-agent-teams/README.md), finding 3: the brief has a convention and no test. This file says what is run, how it is judged, and what the run cannot show. The numbers are in [results.md](results.md).
 
+Round two, with hidden cases and two tiers, is in [protocol-2.md](protocol-2.md).
+
 ## Question
 
 For a small hosted model given one task with a checkable answer, does adding a brief change how often the answer passes, and how often the model asks instead of answering?

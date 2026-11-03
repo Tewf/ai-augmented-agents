@@ -158,6 +158,15 @@ def write_report(rows):
                 h, v = rate(rs), rate(rs, "visible")
                 cells.append(f"{h[0]}/{h[1]} ({v[0]})")
             L.append(f"| {TIER_LABEL[t]} | {k} | " + " | ".join(cells) + " |")
+    L += ["", "## Round one beside", "",
+          "Round one's thirty replies (task scope, the small hosted model), judged by the visible tests as then, and rescored on the hidden tests of this round. "
+          "The visible column reproduces [results.md](results.md).", "",
+          "| Arm | Visible pass (round one) | Hidden pass (rescored) |", "|---|---|---|"]
+    old = [json.loads(ln) for ln in (HERE / "results.jsonl").read_text(encoding="utf-8").splitlines() if ln.strip()]
+    for arm in tasks2.ARMS:
+        rs = [r for r in old if r["arm"] == arm and not r["error"]]
+        sc = [judge_both("scope", r["reply"]) for r in rs]
+        L.append(f"| {ARM_LABEL[arm]} | {sum(1 for h, v, _ in sc if v)}/{len(rs)} | {sum(1 for h, v, _ in sc if h)}/{len(rs)} |")
     errs = sum(1 for r in rows if r["error"])
     L += ["", f"Calls recorded: {len(rows)}; left as errors: {errs}.", ""]
     REPORT.write_text("\n".join(L), encoding="utf-8")
