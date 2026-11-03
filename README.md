@@ -11,7 +11,7 @@ many, with the tools of game theory, team theory and multi-agent reinforcement l
 This page in French: [README.fr.md](README.fr.md).
 
 > **Status (2026-11-02):** the first pass of the literature review is written: 35 sources, one reviewer, the baseline
-> named. Nothing has been run or built. The frame step found that the field's word for the problem is **team**, not
+> named. One small run on the brief has been made (30 calls); nothing else has been run or built. The frame step found that the field's word for the problem is **team**, not
 > agent; the name stays. It is not an official standard, not a peer-reviewed study and not a new result.
 >
 > **How it is made:** with Claude, an AI assistant by Anthropic, under the maintainer's direction, the way
@@ -97,8 +97,21 @@ The first pass: 35 sources, 3 of them grey. Details and grades are in [the revie
 - **No field names the whole problem.** Economics studies teams of people (team theory, moral hazard in teams), computer science studies programs, and practice has its own words ([frame](evidence/multi-agent-teams/frame.md)).
 - **Many agents do not reliably beat one.** Over 260 configurations the change ran from +80.8% to -70.0%, set by the task (measured). A central check cut error amplification from 17.2 times to 4.4 times.
 - **Delegating to a cheaper model pays, and is measured as routing.** A cascade cut cost by up to 98.3% on one dataset. No source prices briefing and checking.
-- **The brief has a convention and no test.** Objective, output format, tools and boundaries are advised by one company about its own system; no study removes one field.
+- **The brief has a convention and no test.** Objective, output format, tools and boundaries are advised by one company about its own system; no study removes one field. A first run is below.
 - **Incentives and counts are open.** No source shows a model agent has an incentive, and none counts decisions taken twice or facts written twice.
+
+## The first run: the brief
+
+One task with a checkable answer, given to a small hosted model in three arms, ten runs each, judged by unit tests ([protocol](experiments/brief-test/protocol.md), [results](experiments/brief-test/results.md), [decision 0003](decisions/0003-the-brief-is-tested-on-one-small-task.md)).
+
+| Arm | Passed of 10 | Questions asked |
+|---|---|---|
+| no brief | 0 | 0 |
+| convention brief | 0 | 0 |
+| convention plus the checks | 5 | 0 |
+
+- The convention alone did not help on this task; listing the checks did.
+- It cannot say more: one task, one model, ten runs, and the last arm is shown the cases it is judged by.
 
 ## The baseline
 
@@ -121,6 +134,7 @@ master also renders the site, [tewf.github.io/ai-augmented-agents](https://tewf.
 | Part | Summary |
 |---|---|
 | [evidence](evidence/) | the review behind this repository: frame, protocol, sources, findings, position and baseline |
+| [experiments](experiments/) | runs of the questions above, with protocol, code and results |
 | [decisions](decisions/) | one record per choice that shapes this repository, each opening with the decision in one sentence |
 
 ## Licence

@@ -23,7 +23,7 @@ answer = "No: each strand under `Existing reviews` and the lettered headings is 
 check = "document-mode"
 path = "README.fr.md"
 question = "reads about equally as how-to and tutorial: one mode per document?"
-file = "0f9b08477206"
+file = "a72d64696e6b"
 answer = "Reference: la page d'accueil, lue pour `Où il se place`, `Ce que la revue a trouvé` et `La référence`; la seule tâche, `Vérifier`, tient en deux commandes."
 
 [[answer]]
@@ -123,3 +123,17 @@ path = "evidence/multi-agent-teams/state-of-the-art.md"
 question = "the name 'state' and the opening are far apart in meaning (0.02): does the name predict the content?"
 file = "03c2543b5893"
 answer = "Yes: the `State of the art: the best evidence and the practice most adopted` heading names the two columns the file compares."
+
+[[answer]]
+check = "tree-shape"
+path = "experiments"
+question = "2 entries: fold into the parent folder, unless this folder is one record of a collection (a job, a chapter, a topic)."
+file = ""
+answer = "It stays: `experiments` is a collection whose records are experiment folders, one today (`brief-test`) and one more per question the review leaves open."
+
+[[answer]]
+check = "name-content"
+path = "experiments/brief-test/protocol.md"
+question = "the name 'protocol' and the opening are far apart in meaning (0.16): does the name predict the content?"
+file = "486cb69c4a34"
+answer = "Yes: `Protocol` names what the file holds, the task, arms, judge and limits of the run, as a protocol does; the title only adds the question it serves."
