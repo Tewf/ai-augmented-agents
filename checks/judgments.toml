@@ -494,3 +494,59 @@ path = "evidence/bibliography.md"
 question = "changed together with evidence/multi-agent-teams/state-of-the-art.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
 file = "da15aaf3e40b"
 answer = "They stay apart: `evidence/bibliography.md` serves another role than the file it changes with, and they change together by construction, not by overlap."
+
+[[answer]]
+check = "co-change"
+path = "CHANGELOG.md"
+question = "changed together with decisions/0001-a-repository-of-its-own.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "e981f9cc4811"
+answer = "They stay apart: `CHANGELOG.md` records pins and additions for the whole repository, and changes whenever a record is added."
+
+[[answer]]
+check = "co-change"
+path = "decisions/README.md"
+question = "changed together with shapes/exchange.md in 3 commits (75% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "7650da4c431c"
+answer = "They stay apart: `decisions/README.md` is the index of the records, and changes whenever a file elsewhere prompts a record."
+
+[[answer]]
+check = "co-change"
+path = "evidence/bibliography.md"
+question = "changed together with evidence/multi-agent-teams/against.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "8b3a64039fa4"
+answer = "They stay apart: `evidence/bibliography.md` holds every cited work once, and changes whenever a review adds a source."
+
+[[answer]]
+check = "co-change"
+path = "evidence/bibliography.md"
+question = "changed together with evidence/multi-agent-teams/position.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "8b3a64039fa4"
+answer = "They stay apart: `evidence/bibliography.md` holds every cited work once, and changes whenever a review adds a source."
+
+[[answer]]
+check = "co-change"
+path = "evidence/bibliography.md"
+question = "changed together with evidence/multi-agent-teams/protocol.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "8b3a64039fa4"
+answer = "They stay apart: `evidence/bibliography.md` holds every cited work once, and changes whenever a review adds a source."
+
+[[answer]]
+check = "co-change"
+path = "evidence/bibliography.md"
+question = "changed together with evidence/multi-agent-teams/review.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "8b3a64039fa4"
+answer = "They stay apart: `evidence/bibliography.md` holds every cited work once, and changes whenever a review adds a source."
+
+[[answer]]
+check = "co-change"
+path = "evidence/bibliography.md"
+question = "changed together with evidence/multi-agent-teams/sources.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "8b3a64039fa4"
+answer = "They stay apart: `evidence/bibliography.md` holds every cited work once, and changes whenever a review adds a source."
+
+[[answer]]
+check = "co-change"
+path = "evidence/bibliography.md"
+question = "changed together with evidence/multi-agent-teams/state-of-the-art.md in 3 commits (100% of the rarer one's), from another folder: should they share a folder, or should one link to the other?"
+file = "8b3a64039fa4"
+answer = "They stay apart: `evidence/bibliography.md` holds every cited work once, and changes whenever a review adds a source."
