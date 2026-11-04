@@ -31,3 +31,4 @@ Each page's markdown source is served at the same path with a .md extension.
 ## Protocols
 
 - [The maestro protocol](https://tewf.github.io/ai-augmented-agents/protocols/maestro.md): tiers cheapest first, jobs in the waves their dependencies allow, a cap spent by expected gain per cost; a convention.
+- [Convergence review](https://tewf.github.io/ai-augmented-agents/evidence/convergence/README.md): five results on agreement, correlated raters, batches and audit passes, and four quantities to measure.
