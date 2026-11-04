@@ -1,5 +1,7 @@
 # State of the art: the best evidence and the practice most adopted
 
+The same step for the neighbouring strand is in [multi-agent teams](../multi-agent-teams/state-of-the-art.md).
+
 Step 3 of the review: one table per question, with the best record and the common practice in separate rows. Keys are in the [bibliography](../bibliography.md).
 
 **Shape:** [state of the art](https://github.com/Tewf/reader-ergonomics-review/blob/a7f405f26f14cd188291e2a86b630121c4302a94/shapes/state-of-the-art.md)

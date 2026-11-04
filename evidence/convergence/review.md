@@ -42,7 +42,7 @@ Step 2 of the review. It states the five results as claims with their sources, s
 
 ## D. A lead that corrects a fraction per pass is a contraction (Q4)
 
-- **Model**: let e(k) be the errors left after pass k. A pass corrects a fraction lambda of them, so e(k+1) = (1 - lambda) e(k) and e(k) = (1 - lambda)^k e(0). For any lambda above 0 the errors fall geometrically.
+- **Error model**: let e(k) be the errors left after pass k. A pass corrects a fraction lambda of them, so e(k+1) = (1 - lambda) e(k) and e(k) = (1 - lambda)^k e(0). For any lambda above 0 the errors fall geometrically.
 - **With fresh errors**: if each pass adds eps new errors before it corrects, the errors settle at eps (1 - lambda) / lambda. A small lambda leaves a large floor.
 - **An exact check resets**: a program that decides an item with no error sets the errors on what it covers to zero, and does not depend on lambda. Grade: derived; the model is arithmetic, and lambda is not measured.
 - **Without an outside signal**: a model correcting its own reasoning did not reliably improve it (Huang 2024, abstract, secondary). That is the case of a lambda near 0 with no exact check.

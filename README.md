@@ -6,7 +6,7 @@
 Several **agents**, people and language models, working one project: who delegates what to whom, by what brief, what
 each one decides, and what makes them pull the same way. The one-model case is
 [ai-augmented-project](https://github.com/Tewf/ai-augmented-project); this repository asks what changes when there are
-many, with the tools of game theory, team theory and multi-agent reinforcement learning.
+many, with the tools of game theory, [team theory](evidence/convergence/review.md) and multi-agent reinforcement learning.
 
 This page in French: [README.fr.md](README.fr.md).
 

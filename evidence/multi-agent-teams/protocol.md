@@ -33,7 +33,7 @@ Q1 to Q4 of [frame](frame.md): delegate or do, the brief, incentives, measured c
 
 ## 4. Formal search
 
-Counts are from OpenAlex, title and abstract field, on 2026-11-02, with no key and no account. One query timed out and was not rerun.
+Counts are from OpenAlex (the strand on [team theory](../convergence/review.md) has its own protocol), title and abstract field, on 2026-11-02, with no key and no account. One query timed out and was not rerun.
 
 | String | Database | Hits |
 |---|---|---|

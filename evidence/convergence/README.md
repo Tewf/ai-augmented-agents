@@ -15,7 +15,7 @@ The first pass of the review on how several agents settle on an answer. It state
 | [protocol](protocol.md) | how the pool was built and searched |
 | [sources](sources.md) | the flow and one row per work |
 | [review](review.md) | step 2: the five claims and the four quantities |
-| [state of the art](state-of-the-art.md) | step 3: best evidence apart from practice most adopted |
+| [state of the art](state-of-the-art.md) | step 3: [best evidence](../multi-agent-teams/state-of-the-art.md) apart from practice most adopted |
 | [against](against.md) | the evidence that cuts the other way |
 | [position](position.md) | step 4: what is known, what is not, what can be added |
 | [baseline](baseline.md) | step 5: the named baseline and how it is compared |

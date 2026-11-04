@@ -20,7 +20,7 @@ Evidence against a claim of [review](review.md), kept beside it. Keys are in the
 ## The economics may not transfer
 
 - Moral hazard needs an agent who dislikes effort. No source shows a model agent does (Q3 stays open).
-- Team theory assumes a shared goal. Models in one session share a prompt, not a goal.
+- [Team theory](../convergence/review.md) assumes a shared goal. Models in one session share a prompt, not a goal.
 - The two classics and the book were not opened; their statements here are the textbook ones.
 
 ## People with AI can lose

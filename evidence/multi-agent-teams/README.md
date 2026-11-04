@@ -26,7 +26,7 @@ The first pass of the review behind this repository. It asks when handing a step
 
 | Claim | Grade | Where |
 |---|---|---|
-| The field calls the problem team theory, agency theory and multi-agent systems, in three traditions that do not cite each other | convention | frame.md |
+| The field calls the problem [team theory](../convergence/review.md), agency theory and multi-agent systems, in three traditions that do not cite each other | convention | frame.md |
 | Whether many agents beat one depends on the task: from +80.8% to -70.0% across 260 configurations | measured | review.md C |
 | A central check cut error amplification from 17.2 times to 4.4 times | measured | review.md C |
 | Failures of multi-agent language-model systems cluster in 14 modes in three groups | measured, descriptive | review.md C |
