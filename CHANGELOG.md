@@ -3,6 +3,13 @@
 The releases this repository pins, newest first, in the form of [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 A pin move is recorded here, not in decisions/.
 
+## [Unreleased]
+
+### Added
+
+- `protocols/schedule.py --jobs` reads a job record, the `[[job]]` tables of ai-augmented-project's job-record shape:
+  depends_on is the wait and minutes the length; 7 tests.
+
 ## [0.1.1] - 2026-11-04
 
 ### Added

@@ -8,7 +8,11 @@ jobs.toml holds one table per job under [jobs.<name>] with
   taken = 4                the wave the job was actually run in (optional), for the comparison
 The caller owns the units. Every number is an estimate until the quantities are recorded (protocols/maestro.md).
 
+A job record (the `[[job]]` tables of ai-augmented-project, shapes/job-record.md) is read with --jobs: its depends_on is
+`after` and its minutes is `weight`, so the unit is minutes; a job with no minutes keeps the default weight of 1.
+
 Run: python3 protocols/schedule.py protocols/jobs.toml [--rank] [--cap N] [--compare]
+     python3 protocols/schedule.py --jobs jobs.toml
 Time O(jobs + dependencies) for the path and waves; O(jobs squared) for the capped order.
 """
 from __future__ import annotations
@@ -26,6 +30,25 @@ class ScheduleError(ValueError):
 def load(path: Path) -> dict[str, dict]:
     with open(path, "rb") as handle:
         return parse(tomllib.load(handle))
+
+
+def from_records(data: dict) -> dict:
+    """The `[[job]]` tables of a job record as the `[jobs.<id>]` tables parse() reads: depends_on to after, minutes to weight."""
+    rows = {}
+    for row in data.get("job", []):
+        if "id" not in row:
+            raise ScheduleError("a [[job]] table has no id")
+        if row["id"] in rows:
+            raise ScheduleError(f"{row['id']}: two jobs have this id")
+        rows[row["id"]] = {"after": row.get("depends_on", [])}
+        if "minutes" in row:
+            rows[row["id"]]["weight"] = row["minutes"]
+    return {"jobs": rows}
+
+
+def load_records(path: Path) -> dict[str, dict]:
+    with open(path, "rb") as handle:
+        return parse(from_records(tomllib.load(handle)))
 
 
 def parse(data: dict) -> dict[str, dict]:
@@ -130,13 +153,16 @@ def compare(jobs: dict[str, dict]) -> list[tuple[str, int, int]]:
 
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("file", type=Path)
+    parser.add_argument("file", type=Path, nargs="?")
+    parser.add_argument("--jobs", type=Path, help="a job record ([[job]] tables) in place of a schedule file")
     parser.add_argument("--rank", action="store_true", help="print the order by expected gain per cost")
     parser.add_argument("--cap", type=float, help="with --rank, stop at this total cost")
     parser.add_argument("--compare", action="store_true", help="print the jobs that ran later than the first wave they could")
     args = parser.parse_args(argv)
+    if (args.file is None) == (args.jobs is None):
+        parser.error("give a schedule file or --jobs FILE, not both and not neither")
     try:
-        jobs = load(args.file)
+        jobs = load_records(args.jobs) if args.jobs else load(args.file)
     except (OSError, tomllib.TOMLDecodeError, ScheduleError) as error:
         print(f"error: {error}", file=sys.stderr)
         return 2

@@ -104,5 +104,56 @@ class Files(unittest.TestCase):
             self.assertEqual(schedule.main([str(bad)]), 2)
 
 
+RECORD = """[[job]]
+id = "a"
+minutes = 10
+
+[[job]]
+id = "b"
+depends_on = ["a"]
+minutes = 5
+
+[[job]]
+id = "c"
+"""
+
+
+class Records(unittest.TestCase):
+    def setUp(self):
+        self.dir = tempfile.TemporaryDirectory()
+        self.path = Path(self.dir.name) / "jobs.toml"
+        self.path.write_text(RECORD)
+
+    def tearDown(self):
+        self.dir.cleanup()
+
+    def test_minutes_are_the_weight_and_depends_on_the_wait(self):
+        j = schedule.load_records(self.path)
+        self.assertEqual((j["b"]["after"], j["a"]["weight"], j["b"]["weight"]), (["a"], 10, 5))
+        self.assertEqual(schedule.critical_path(j), (["a", "b"], 15))
+
+    def test_a_job_without_minutes_keeps_the_default_weight(self):
+        self.assertEqual(schedule.load_records(self.path)["c"]["weight"], 1)
+
+    def test_the_waves_follow_depends_on(self):
+        self.assertEqual(schedule.waves(schedule.load_records(self.path)), [["a", "c"], ["b"]])
+
+    def test_main_accepts_jobs_and_a_row_with_the_replays_fields(self):
+        self.path.write_text(RECORD.replace('id = "c"', 'id = "c"\nwave = 0\nkind = "build"\nagents = 1\ntokens_k = 230'))
+        self.assertEqual(schedule.main(["--jobs", str(self.path)]), 0)
+
+    def test_an_unknown_dependency_in_a_record_is_refused(self):
+        self.path.write_text(RECORD.replace('["a"]', '["ghost"]'))
+        self.assertEqual(schedule.main(["--jobs", str(self.path)]), 2)
+
+    def test_two_jobs_with_one_id_are_refused(self):
+        with self.assertRaisesRegex(schedule.ScheduleError, "two jobs"):
+            schedule.from_records({"job": [{"id": "a"}, {"id": "a"}]})
+
+    def test_a_file_and_jobs_together_are_refused(self):
+        with self.assertRaises(SystemExit):
+            schedule.main([str(self.path), "--jobs", str(self.path)])
+
+
 if __name__ == "__main__":
     unittest.main()
