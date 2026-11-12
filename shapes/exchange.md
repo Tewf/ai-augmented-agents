@@ -37,7 +37,7 @@ Whether the shape as a whole helps is untested: the [baseline](../evidence/multi
 | The line "If the check fails" | [escalate on a failed check](../principles/brief/escalate-on-a-failed-check.md) |
 | The verdict after the checks are run | [run the checks at the lead](../principles/result/run-the-checks-at-the-lead.md) |
 | The result file kept apart from the verdict | [keep the result untouched](../principles/result/keep-the-result-untouched.md) |
-| The answer first, the section labels | [overview first](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/principles/document/overview-first.md) |
+| The answer first, the section labels | [overview first](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/principles/document/overview-first.md) |
 
 ## The skeleton
 

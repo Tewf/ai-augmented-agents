@@ -2,7 +2,7 @@
 
 **Decision:** The principle [list the checks](../principles/brief/list-the-checks.md) keeps its claim as an acceptance rule and loses its claim as a way to raise a worker's pass rate, because round two found no gain on hidden cases.
 
-**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/shapes/decision-record.md).
 
 ## Context
 

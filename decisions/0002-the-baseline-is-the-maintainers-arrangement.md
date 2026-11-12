@@ -2,7 +2,7 @@
 
 **Decision:** The review compares everything against B1, the maintainer's arrangement of one coordinating session and six owners, described as practice and cited to nothing private.
 
-**Status:** accepted, 2026-11-02. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/shapes/decision-record.md).
+**Status:** accepted, 2026-11-02. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/shapes/decision-record.md).
 
 ## Context
 

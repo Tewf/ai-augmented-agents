@@ -2,11 +2,11 @@
 
 **Decision:** A finding of the review became a principle when it graded measured or supported with caveat and a program can check how a task or result file follows it; the others stayed findings.
 
-**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/shapes/decision-record.md).
+**Status:** accepted, 2026-11-03. **Shape:** [decision record](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/shapes/decision-record.md).
 
 ## Context
 
-- The extension contract asks for one principle file per rule, each with a grade and a check ([extending](https://github.com/Tewf/reader-ergonomics/blob/2e5b6f0c3e67d2dc8195a63cf882d46170e79a5a/extending.md)). The standard's `principle-coverage` check fails a principle whose Check line names no registered check.
+- The extension contract asks for one principle file per rule, each with a grade and a check ([extending](https://github.com/Tewf/reader-ergonomics/blob/65e42472e2d4cbfd994c2a86e95a47e5dc7301ca/extending.md)). The standard's `principle-coverage` check fails a principle whose Check line names no registered check.
 - The review graded most findings convention or measured on a model benchmark. The brief test added one small result.
 - The shape these principles serve is the [exchange](../shapes/exchange.md): a task file, a result file, and a verdict elsewhere.
 
